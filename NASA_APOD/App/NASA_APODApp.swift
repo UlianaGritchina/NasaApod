@@ -17,3 +17,19 @@ struct NASA_APODApp: App {
         }
     }
 }
+
+final class AppContainer {
+    
+    let networkClient: NetworkClient
+    let apodAPI: ApodAPI
+    let apodRepository: ApodRepository
+    
+    init() {
+        self.networkClient = NetworkClient(
+            baseURL: URL(string: NasaApiConfig.baseURL.rawValue)!,
+            apiKey: NasaApiConfig.apiKey.rawValue
+        )
+        self.apodAPI = ApodAPIImpl(client: networkClient)
+        self.apodRepository = ApodRepositoryImpl(apodApi: apodAPI)
+    }
+}

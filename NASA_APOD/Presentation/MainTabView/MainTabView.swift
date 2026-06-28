@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let container = AppContainer()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            MainApodView(
+                MainApodView.ViewModel(repository: container.apodRepository)
+            )
+            .tabItem {
+                Label("Apod", systemImage: "moon.stars")
+            }
+        }
     }
 }
 

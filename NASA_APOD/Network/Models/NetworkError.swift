@@ -1,0 +1,16 @@
+//
+//  NetworkError.swift
+//  NASA_APOD
+//
+//  Created by Ульяна Гритчина on 27.06.2026.
+//
+
+import Foundation
+
+enum NetworkError: Error {
+    case invalidURL
+    case invalidResponse
+    case serverError(Int)
+    case decoding(Error)
+    case unknown(Error)
+}
