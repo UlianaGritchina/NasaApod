@@ -7,10 +7,10 @@
 
 import Foundation
 
-extension MainApodView {
+
     @MainActor
     @Observable
-    final class ViewModel {
+    final class MainApodViewModel {
         private let repository: ApodRepository
         
         var apod: Apod?
@@ -36,4 +36,4 @@ extension MainApodView {
             }
         }
     }
-}
+

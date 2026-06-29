@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct MainApodView: View {
-    private var viewModel: ViewModel
+    private var viewModel: MainApodViewModel
     
-    init(_ viewModel: MainApodView.ViewModel) {
+    init(_ viewModel: MainApodViewModel) {
         self.viewModel = viewModel
     }
     
@@ -50,7 +50,7 @@ struct MainApodView: View {
 }
 
 #Preview {
-    MainApodView(MainApodView.ViewModel(repository: MockApodRepository()))
+    MainApodView(MainApodViewModel(repository: MockApodRepository()))
 }
 
 final class MockApodRepository: ApodRepository {

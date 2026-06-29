@@ -10,26 +10,17 @@ import SwiftData
 
 @main
 struct NASA_APODApp: App {
-    
-    var body: some Scene {
-        WindowGroup {
-            MainTabView()
-        }
-    }
-}
 
-final class AppContainer {
-    
-    let networkClient: NetworkClient
-    let apodAPI: ApodAPI
-    let apodRepository: ApodRepository
+    private let container = DependencyContainer()
+    private let environment = EnvironmentLoader.load()
     
     init() {
-        self.networkClient = NetworkClient(
-            baseURL: URL(string: NasaApiConfig.baseURL.rawValue)!,
-            apiKey: NasaApiConfig.apiKey.rawValue
-        )
-        self.apodAPI = ApodAPIImpl(client: networkClient)
-        self.apodRepository = ApodRepositoryImpl(apodApi: apodAPI)
+        AppAssembly.register(in: container, environment: environment)
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            MainTabView(container: container)
+        }
     }
 }

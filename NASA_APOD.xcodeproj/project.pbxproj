@@ -33,7 +33,7 @@
 		0E76076C2FEAAEF500F958AA /* Exceptions for "NASA_APOD" folder in "NASA_APOD" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Resourses/Info.plist,
+				App/Resourses/Info.plist,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;
 		};
@@ -295,7 +295,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NASA_APOD/Resourses/Info.plist;
+				INFOPLIST_FILE = NASA_APOD/App/Resourses/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Universe ONE";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -341,7 +341,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NASA_APOD/Resourses/Info.plist;
+				INFOPLIST_FILE = NASA_APOD/App/Resourses/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Universe ONE";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
