@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE12FF2A1D4005F4D0B /* APOD */; };
+		0E37ECE52FF2A368005F4D0B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE42FF2A368005F4D0B /* Core */; };
+		0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB4BE2D2FF2A70B006DA1A6 /* Shared */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0E76075B2FEAAEF500F958AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,6 +40,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/Resourses/Info.plist,
+				Packages/Core,
+				Packages/Shared,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;
 		};
@@ -65,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */,
+				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
+				0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E37ECE02FF2A1D4005F4D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0E7607402FEAAEF300F958AA = {
 			isa = PBXGroup;
 			children = (
 				0E76074B2FEAAEF300F958AA /* NASA_APOD */,
 				0E76075D2FEAAEF500F958AA /* NASA_APODTests */,
 				0E7607672FEAAEF500F958AA /* NASA_APODUITests */,
+				0E37ECE02FF2A1D4005F4D0B /* Frameworks */,
 				0E76074A2FEAAEF300F958AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +144,9 @@
 			);
 			name = NASA_APOD;
 			packageProductDependencies = (
+				0E37ECE12FF2A1D4005F4D0B /* APOD */,
+				0E37ECE42FF2A368005F4D0B /* Core */,
+				0EB4BE2D2FF2A70B006DA1A6 /* Shared */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NASA_APOD.app */;
@@ -632,6 +654,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E37ECE12FF2A1D4005F4D0B /* APOD */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APOD;
+		};
+		0E37ECE42FF2A368005F4D0B /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		0EB4BE2D2FF2A70B006DA1A6 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E7607412FEAAEF300F958AA /* Project object */;
 }

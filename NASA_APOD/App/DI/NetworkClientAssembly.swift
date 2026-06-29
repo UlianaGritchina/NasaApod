@@ -5,6 +5,7 @@
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
 
+import Core
 import Foundation
 
 enum NetworkClientAssembly {

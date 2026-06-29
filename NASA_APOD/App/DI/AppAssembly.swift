@@ -5,6 +5,8 @@
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
 
+import Core
+import APOD
 import Foundation
 
 enum AppAssembly {
@@ -13,3 +15,4 @@ enum AppAssembly {
         ApodAssembly.register(in: container)
     }
 }
+

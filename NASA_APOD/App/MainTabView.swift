@@ -5,7 +5,7 @@
 //  Created by Ульяна Гритчина on 23.06.2026.
 //
 
-
+import APOD
 import SwiftUI
 
 struct MainTabView: View {
