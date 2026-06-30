@@ -10,7 +10,7 @@ import Foundation
 public extension String {
     func toDate(format: DateFormat = .base) -> Date? {
         let formatter = DateFormatter()
-        formatter.dateFormat = format.rawValue
+        formatter.dateFormat = format.value
         return formatter.date(from: self)
     }
 }

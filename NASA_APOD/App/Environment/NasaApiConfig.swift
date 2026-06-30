@@ -11,4 +11,5 @@ enum NasaApiConfig: String {
     case baseURL = "https://api.nasa.gov"
     case apiKey = "your api key from https://api.nasa.gov"
     case demoKey = "DEMO_KEY"
+    case demoKey = "oWsYmdEdqaHzl1gwxBgU8V8Y8rLak8sFZgfgsH4W"
 }

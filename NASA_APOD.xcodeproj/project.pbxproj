@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE12FF2A1D4005F4D0B /* APOD */; };
 		0E37ECE52FF2A368005F4D0B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE42FF2A368005F4D0B /* Core */; };
+		0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4CD3742FF3B75700485651 /* DesignSystem */; };
 		0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB4BE2D2FF2A70B006DA1A6 /* Shared */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 			membershipExceptions = (
 				App/Resourses/Info.plist,
 				Packages/Core,
+				Packages/DesignSystem,
 				Packages/Shared,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;
@@ -76,6 +78,7 @@
 				0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */,
 				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
 				0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */,
+				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +150,7 @@
 				0E37ECE12FF2A1D4005F4D0B /* APOD */,
 				0E37ECE42FF2A368005F4D0B /* Core */,
 				0EB4BE2D2FF2A70B006DA1A6 /* Shared */,
+				0E4CD3742FF3B75700485651 /* DesignSystem */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NASA_APOD.app */;
@@ -663,6 +667,10 @@
 		0E37ECE42FF2A368005F4D0B /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
+		};
+		0E4CD3742FF3B75700485651 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 		0EB4BE2D2FF2A70B006DA1A6 /* Shared */ = {
 			isa = XCSwiftPackageProductDependency;
