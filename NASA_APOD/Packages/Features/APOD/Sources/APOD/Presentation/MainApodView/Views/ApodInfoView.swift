@@ -11,6 +11,7 @@ import SwiftUI
 struct ApodInfoView: View {
     let apod: Apod
     let imageData: Data?
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(apod.title)

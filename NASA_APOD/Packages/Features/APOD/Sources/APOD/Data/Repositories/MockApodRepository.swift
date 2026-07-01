@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MockApodRepositoryImpl: ApodRepository {
+final class MockApodRepository: ApodRepository {
     
     func getApodImage(for url: URL) async throws -> Data {
         Data()

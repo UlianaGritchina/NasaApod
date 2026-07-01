@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Apod: Equatable, Codable {
+public struct Apod: Equatable, Codable, Sendable {
     let url: URL
     let title: String
     let date: Date

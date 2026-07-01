@@ -15,7 +15,6 @@ public final class CacheServiceImpl: CacheService, @unchecked Sendable {
     private let decoder = JSONDecoder()
     
     public init() throws {
-        
         cacheDirectory = try fileManager
             .url(
                 for: .cachesDirectory,

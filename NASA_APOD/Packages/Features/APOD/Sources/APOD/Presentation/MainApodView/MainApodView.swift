@@ -37,7 +37,7 @@ public struct MainApodView: View {
 }
 
 #Preview {
-    MainApodView(MainApodViewModel(repository: MockApodRepositoryImpl()))
+    MainApodView(MainApodViewModel(repository: MockApodRepository()))
 }
 
 extension MainApodView {

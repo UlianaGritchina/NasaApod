@@ -24,14 +24,6 @@ extension AppEnvironment {
         )
     }
     
-    static func staging() -> AppEnvironment {
-        .init(
-            type: .staging,
-            baseURL: URL(string: NasaApiConfig.baseURL.rawValue)!,
-            apiKey: "STAGING_KEY"
-        )
-    }
-    
     static func prod() -> AppEnvironment {
         .init(
             type: .prod,

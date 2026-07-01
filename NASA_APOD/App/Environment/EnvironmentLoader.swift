@@ -11,12 +11,8 @@ enum EnvironmentLoader {
     static func load() -> AppEnvironment {
         let env = Bundle.main.object(forInfoDictionaryKey: "APP_ENV") as? String
         switch env {
-        case "dev":
-            return .dev()
-        case "staging":
-            return .staging()
-        default:
-            return .prod()
+        case "prod": return .prod()
+        default: return .dev()
         }
     }
 }
