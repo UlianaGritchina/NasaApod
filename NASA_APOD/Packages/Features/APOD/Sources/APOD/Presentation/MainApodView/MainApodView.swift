@@ -1,0 +1,73 @@
+//
+//  ApodView.swift
+//  NASA_APOD
+//
+//  Created by Ульяна Гритчина on 24.06.2026.
+//
+
+import SwiftUI
+
+public struct MainApodView: View {
+    private var viewModel: MainApodViewModel
+    
+    public init(_ viewModel: MainApodViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    public var body: some View {
+        NavigationStack {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 12) {
+                    datePicker
+                    apodContent
+                }
+                .padding(.horizontal)
+            }
+            .navigationTitle("APOD")
+            .task {
+                await viewModel.fetchApodInfo()
+            }
+            .onChange(of: viewModel.selectedDate) {
+                Task {
+                    await viewModel.fetchApodInfo()
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    MainApodView(MainApodViewModel(repository: MockApodRepositoryImpl()))
+}
+
+extension MainApodView {
+    private var datePicker: some View {
+        @Bindable var bindableVM = viewModel
+        return DatePicker(
+            "Astronomy Picture of the Day:",
+            selection: $bindableVM.selectedDate,
+            in: viewModel.datePickerRange,
+            displayedComponents: [.date]
+        )
+        .font(.appDate)
+        .lineLimit(1)
+        .minimumScaleFactor(0.1)
+    }
+    
+    @ViewBuilder
+    private var apodContent: some View {
+        switch viewModel.viewState {
+        case .loading:
+            ProgressView()
+            
+        case .loaded(let apod):
+            ApodInfoView(
+                apod: apod,
+                imageData: viewModel.apodImageData
+            )
+            
+        case .error:
+            Text("try again later")
+        }
+    }
+}

@@ -10,11 +10,19 @@ import Foundation
 
 enum NetworkClientAssembly {
     static func register(in container: DependencyContainer, env: AppEnvironment) {
-            container.register(NetworkClientProtocol.self) {
-                NetworkClient(
-                    baseURL: env.baseURL,
-                    apiKey: env.apiKey
-                )
-            }
+        container.register(NetworkClientProtocol.self) {
+            NetworkClient(
+                baseURL: env.baseURL,
+                apiKey: env.apiKey
+            )
         }
+    }
+}
+
+enum CacheServiceAssembly {
+    static func register(in container: DependencyContainer, env: AppEnvironment) {
+        container.register(CacheService.self) {
+            try! CacheServiceImpl()
+        }
+    }
 }

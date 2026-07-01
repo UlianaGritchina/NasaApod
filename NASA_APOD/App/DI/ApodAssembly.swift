@@ -14,13 +14,14 @@ enum ApodAssembly {
         
         container.register(ApodAPI.self) {
             ApodAPIImpl(
-                client: try! container.resolve(NetworkClientProtocol.self)
+                networkClient: try! container.resolve(NetworkClientProtocol.self)
             )
         }
         
         container.register(ApodRepository.self) {
             ApodRepositoryImpl(
-                apodApi: try! container.resolve(ApodAPI.self)
+                apodApi: try! container.resolve(ApodAPI.self),
+                cacheService: try! container.resolve(CacheService.self)
             )
         }
     }

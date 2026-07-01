@@ -43,6 +43,7 @@
 				App/Resourses/Info.plist,
 				Packages/Core,
 				Packages/DesignSystem,
+				Packages/Features/APOD,
 				Packages/Shared,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;

@@ -9,4 +9,5 @@ import Foundation
 
 public protocol NetworkClientProtocol: Sendable {
     func request<T: Decodable>(_ endpoint: Endpoint, response: T.Type) async throws -> T
+    func download(from url: URL) async throws -> Data
 }
