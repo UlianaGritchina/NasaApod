@@ -14,6 +14,7 @@ enum AppAssembly {
         NetworkClientAssembly.register(in: container, env: environment)
         CacheServiceAssembly.register(in: container, env: environment)
         ApodAssembly.register(in: container)
+        NetworkMonitorAssembly.register(in: container, env: environment)
     }
 }
 

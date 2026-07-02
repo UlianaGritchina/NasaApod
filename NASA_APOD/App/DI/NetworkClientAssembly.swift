@@ -19,10 +19,10 @@ enum NetworkClientAssembly {
     }
 }
 
-enum CacheServiceAssembly {
+enum NetworkMonitorAssembly {
     static func register(in container: DependencyContainer, env: AppEnvironment) {
-        container.register(CacheService.self) {
-            try! CacheServiceImpl()
+        container.register(NetworkMonitor.self) {
+            NetworkMonitorImpl()
         }
     }
 }
