@@ -35,7 +35,7 @@ public final class MainApodViewModel {
             let apod = try await repository.getApod(for: selectedDate)
             self.apod = apod
             viewState = .loaded(apod: apod)
-            try await fetchApodImageData(url: apod.url)
+            try? await fetchApodImageData(url: apod.url)
         } catch {
             viewState = .error
         }
@@ -43,7 +43,10 @@ public final class MainApodViewModel {
     
     private func fetchApodImageData(url: URL) async throws {
         apodImageData = nil
-        apodImageData = try await repository.getApodImage(for: url)
+        apodImageData = try await repository.getApodImage(
+            for: url,
+            date: selectedDate
+        )
     }
 }
 

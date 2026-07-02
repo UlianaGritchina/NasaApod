@@ -11,9 +11,9 @@ import Foundation
 
 public final class ApodAPIImpl: ApodAPI {
 
-    private let networkClient: NetworkClientProtocol
+    private let networkClient: NetworkClient
     
-    public init(networkClient: NetworkClientProtocol) {
+    public init(networkClient: NetworkClient) {
         self.networkClient = networkClient
     }
     

@@ -10,8 +10,8 @@ import Foundation
 
 enum NetworkClientAssembly {
     static func register(in container: DependencyContainer, env: AppEnvironment) {
-        container.register(NetworkClientProtocol.self) {
-            NetworkClient(
+        container.register(NetworkClient.self) {
+            NetworkClientImpl(
                 baseURL: env.baseURL,
                 apiKey: env.apiKey
             )

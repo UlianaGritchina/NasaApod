@@ -9,7 +9,7 @@ import Foundation
 
 final class MockApodRepository: ApodRepository {
     
-    func getApodImage(for url: URL) async throws -> Data {
+    func getApodImage(for url: URL, date: Date) async throws -> Data {
         Data()
     }
     

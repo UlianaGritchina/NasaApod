@@ -41,7 +41,6 @@ public final class CacheServiceImpl: CacheService, @unchecked Sendable {
     
     public func get<T: Codable>(_ key: String, as type: T.Type) throws -> T? {
         let url = fileURL(for: key)
-        
         guard fileManager.fileExists(atPath: url.path) else {
             return nil
         }

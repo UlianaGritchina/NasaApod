@@ -33,9 +33,8 @@ public final class ApodRepositoryImpl: ApodRepository {
         return apod
     }
     
-    public func getApodImage(for url: URL) async throws -> Data {
-        let stringUrl = url.absoluteString.hashValue.description
-        let cacheKey = CacheKey.dalyApodImage(url: stringUrl).value
+    public func getApodImage(for url: URL, date: Date) async throws -> Data {
+        let cacheKey = CacheKey.dalyApodImage(date: date.toString()).value
         
         if let cacheImageData = try? cacheService.get(cacheKey, as: Data.self) {
             return cacheImageData

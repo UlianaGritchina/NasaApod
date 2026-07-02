@@ -9,14 +9,14 @@ import Foundation
 
 enum CacheKey {
     case dalyApod(date: String)
-    case dalyApodImage(url: String)
+    case dalyApodImage(date: String)
     
     var value: String {
         switch self {
         case .dalyApod(let date):
             "daly_apod_\(date)"
-        case .dalyApodImage(let url):
-            "daly_apod_image_\(url)"
+        case .dalyApodImage(let date):
+            "daly_apod_image_\(date)"
         }
     }
 }

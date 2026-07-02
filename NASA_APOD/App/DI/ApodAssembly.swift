@@ -14,7 +14,7 @@ enum ApodAssembly {
         
         container.register(ApodAPI.self) {
             ApodAPIImpl(
-                networkClient: try! container.resolve(NetworkClientProtocol.self)
+                networkClient: try! container.resolve(NetworkClient.self)
             )
         }
         
