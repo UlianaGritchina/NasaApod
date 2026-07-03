@@ -11,10 +11,8 @@ import Foundation
 
 enum AppAssembly {
     static func register(in container: DependencyContainer, environment: AppEnvironment) {
-        NetworkClientAssembly.register(in: container, env: environment)
-        CacheServiceAssembly.register(in: container, env: environment)
+        CoreAssembly.register(in: container, env: environment)
         ApodAssembly.register(in: container)
-        NetworkMonitorAssembly.register(in: container, env: environment)
     }
 }
 

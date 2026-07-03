@@ -5,13 +5,12 @@
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
 
-import Core
 import APOD
+import Core
 import Foundation
 
 enum ApodAssembly {
     static func register(in container: DependencyContainer) {
-        
         container.register(ApodAPI.self) {
             ApodAPIImpl(
                 networkClient: try! container.resolve(NetworkClient.self)

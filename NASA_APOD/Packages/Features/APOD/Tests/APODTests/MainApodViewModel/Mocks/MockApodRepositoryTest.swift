@@ -9,6 +9,7 @@ import Foundation
 @testable import APOD
 
 final class MockApodRepositoryTest: ApodRepository {
+    
     let apodResult: Apod
     let imageDataResult: Data
     
@@ -21,7 +22,7 @@ final class MockApodRepositoryTest: ApodRepository {
         apodResult
     }
     
-    func getApodImage(for url: URL) async throws -> Data {
-        imageDataResult
+    func getApodImage(for url: URL, date: Date) async throws -> Data {
+        Data()
     }
 }

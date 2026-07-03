@@ -38,3 +38,7 @@ final class DependencyContainer {
 enum DependencyError: Error {
     case dependencyNotRegistered(String)
 }
+
+protocol DependencyResolver {
+    func resolve<T>(_ type: T.Type) throws -> T
+}

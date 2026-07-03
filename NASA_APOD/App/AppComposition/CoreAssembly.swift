@@ -1,28 +1,28 @@
 //
-//  NetworkClientAssembly.swift
+//  CoreAssembly.swift
 //  NASA_APOD
 //
-//  Created by Ульяна Гритчина on 29.06.2026.
+//  Created by Ульяна Гритчина on 03.07.2026.
 //
 
 import Core
 import Foundation
 
-enum NetworkClientAssembly {
+enum CoreAssembly {
     static func register(in container: DependencyContainer, env: AppEnvironment) {
+        container.register(NetworkMonitor.self) {
+            NetworkMonitorImpl()
+        }
+        
         container.register(NetworkClient.self) {
             NetworkClientImpl(
                 baseURL: env.baseURL,
                 apiKey: env.apiKey
             )
         }
-    }
-}
-
-enum NetworkMonitorAssembly {
-    static func register(in container: DependencyContainer, env: AppEnvironment) {
-        container.register(NetworkMonitor.self) {
-            NetworkMonitorImpl()
+        
+        container.register(CacheService.self) {
+            try! CacheServiceImpl()
         }
     }
 }

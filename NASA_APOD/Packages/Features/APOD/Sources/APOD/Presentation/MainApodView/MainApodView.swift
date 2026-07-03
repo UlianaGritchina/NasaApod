@@ -22,6 +22,7 @@ public struct MainApodView: View {
                     apodContent
                 }
                 .padding(.horizontal)
+                .animation(.easeInOut, value: viewModel.viewState)
             }
             .navigationTitle("APOD")
             .task {
@@ -65,6 +66,7 @@ extension MainApodView {
                 apod: apod,
                 imageData: viewModel.apodImageData
             )
+            .transition(.opacity)
             
         case .error:
             Text("try again later")

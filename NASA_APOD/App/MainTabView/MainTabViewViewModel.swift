@@ -15,19 +15,16 @@ final class MainTabViewViewModel {
     
     private let networkMonitor: NetworkMonitor?
     
-    let container: DependencyContainer
+    let mainApodViewModel: MainApodViewModel
     
-    var mainApodViewModel: MainApodViewModel
     var isLostConnection = false
     
-    init(container: DependencyContainer) {
-        self.container = container
-        
-        mainApodViewModel = MainApodViewModel(
-            repository: try! container.resolve(ApodRepository.self)
-        )
-        
-        networkMonitor = try? container.resolve(NetworkMonitor.self)
+    init(
+        apodRepository: ApodRepository,
+        networkMonitor: NetworkMonitor?
+    ) {
+        self.mainApodViewModel = MainApodViewModel(repository: apodRepository)
+        self.networkMonitor = networkMonitor
     }
     
     func startNetworkMonitoring() async {

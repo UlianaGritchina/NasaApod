@@ -14,8 +14,8 @@ struct MainTabView: View {
     
     let viewModel: MainTabViewViewModel
     
-    init(container: DependencyContainer) {
-        viewModel = MainTabViewViewModel(container: container)
+    init(viewModel: MainTabViewViewModel) {
+        self.viewModel = viewModel
     }
     
     var body: some View {
@@ -35,15 +35,11 @@ struct MainTabView: View {
     }
 }
 
-#Preview {
-    MainTabView(container: DependencyContainer())
-}
-
 extension MainTabView {
     @ViewBuilder
     private var networkBanner: some View {
         if viewModel.isLostConnection {
-            NotificationMessageView(
+            MessageBannerView(
                 message: "Connection lost",
                 systemImageName: "wifi.exclamationmark.circle",
                 imageColor: .red
