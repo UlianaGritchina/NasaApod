@@ -31,13 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E7607492FEAAEF300F958AA /* NASA_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E76075A2FEAAEF500F958AA /* NASA_APODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASA_APODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E7607642FEAAEF500F958AA /* NASA_APODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASA_APODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E7607492FEAAEF300F958AA /* NasaApod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E76075A2FEAAEF500F958AA /* NasaApodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaApodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E7607642FEAAEF500F958AA /* NasaApodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaApodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0E76076C2FEAAEF500F958AA /* Exceptions for "NASA_APOD" folder in "NASA_APOD" target */ = {
+		0E76076C2FEAAEF500F958AA /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/Resourses/Info.plist,
@@ -46,27 +46,27 @@
 				Packages/Features/APOD,
 				Packages/Shared,
 			);
-			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;
+			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0E76074B2FEAAEF300F958AA /* NASA_APOD */ = {
+		0E76074B2FEAAEF300F958AA /* NasaApod */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0E76076C2FEAAEF500F958AA /* Exceptions for "NASA_APOD" folder in "NASA_APOD" target */,
+				0E76076C2FEAAEF500F958AA /* Exceptions for "NasaApod" folder in "NasaApod" target */,
 			);
-			path = NASA_APOD;
+			path = NasaApod;
 			sourceTree = "<group>";
 		};
-		0E76075D2FEAAEF500F958AA /* NASA_APODTests */ = {
+		0E76075D2FEAAEF500F958AA /* NasaApodTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NASA_APODTests;
+			path = NasaApodTests;
 			sourceTree = "<group>";
 		};
-		0E7607672FEAAEF500F958AA /* NASA_APODUITests */ = {
+		0E7607672FEAAEF500F958AA /* NasaApodUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NASA_APODUITests;
+			path = NasaApodUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -110,9 +110,9 @@
 		0E7607402FEAAEF300F958AA = {
 			isa = PBXGroup;
 			children = (
-				0E76074B2FEAAEF300F958AA /* NASA_APOD */,
-				0E76075D2FEAAEF500F958AA /* NASA_APODTests */,
-				0E7607672FEAAEF500F958AA /* NASA_APODUITests */,
+				0E76074B2FEAAEF300F958AA /* NasaApod */,
+				0E76075D2FEAAEF500F958AA /* NasaApodTests */,
+				0E7607672FEAAEF500F958AA /* NasaApodUITests */,
 				0E37ECE02FF2A1D4005F4D0B /* Frameworks */,
 				0E76074A2FEAAEF300F958AA /* Products */,
 			);
@@ -121,9 +121,9 @@
 		0E76074A2FEAAEF300F958AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E7607492FEAAEF300F958AA /* NASA_APOD.app */,
-				0E76075A2FEAAEF500F958AA /* NASA_APODTests.xctest */,
-				0E7607642FEAAEF500F958AA /* NASA_APODUITests.xctest */,
+				0E7607492FEAAEF300F958AA /* NasaApod.app */,
+				0E76075A2FEAAEF500F958AA /* NasaApodTests.xctest */,
+				0E7607642FEAAEF500F958AA /* NasaApodUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E7607482FEAAEF300F958AA /* NASA_APOD */ = {
+		0E7607482FEAAEF300F958AA /* NasaApod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E76076D2FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NASA_APOD" */;
+			buildConfigurationList = 0E76076D2FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NasaApod" */;
 			buildPhases = (
 				0E7607452FEAAEF300F958AA /* Sources */,
 				0E7607462FEAAEF300F958AA /* Frameworks */,
@@ -144,9 +144,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0E76074B2FEAAEF300F958AA /* NASA_APOD */,
+				0E76074B2FEAAEF300F958AA /* NasaApod */,
 			);
-			name = NASA_APOD;
+			name = NasaApod;
 			packageProductDependencies = (
 				0E37ECE12FF2A1D4005F4D0B /* APOD */,
 				0E37ECE42FF2A368005F4D0B /* Core */,
@@ -154,12 +154,12 @@
 				0E4CD3742FF3B75700485651 /* DesignSystem */,
 			);
 			productName = NASA_APOD;
-			productReference = 0E7607492FEAAEF300F958AA /* NASA_APOD.app */;
+			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0E7607592FEAAEF500F958AA /* NASA_APODTests */ = {
+		0E7607592FEAAEF500F958AA /* NasaApodTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E7607722FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NASA_APODTests" */;
+			buildConfigurationList = 0E7607722FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NasaApodTests" */;
 			buildPhases = (
 				0E7607562FEAAEF500F958AA /* Sources */,
 				0E7607572FEAAEF500F958AA /* Frameworks */,
@@ -171,18 +171,18 @@
 				0E76075C2FEAAEF500F958AA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				0E76075D2FEAAEF500F958AA /* NASA_APODTests */,
+				0E76075D2FEAAEF500F958AA /* NasaApodTests */,
 			);
-			name = NASA_APODTests;
+			name = NasaApodTests;
 			packageProductDependencies = (
 			);
 			productName = NASA_APODTests;
-			productReference = 0E76075A2FEAAEF500F958AA /* NASA_APODTests.xctest */;
+			productReference = 0E76075A2FEAAEF500F958AA /* NasaApodTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0E7607632FEAAEF500F958AA /* NASA_APODUITests */ = {
+		0E7607632FEAAEF500F958AA /* NasaApodUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E7607752FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NASA_APODUITests" */;
+			buildConfigurationList = 0E7607752FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NasaApodUITests" */;
 			buildPhases = (
 				0E7607602FEAAEF500F958AA /* Sources */,
 				0E7607612FEAAEF500F958AA /* Frameworks */,
@@ -194,13 +194,13 @@
 				0E7607662FEAAEF500F958AA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				0E7607672FEAAEF500F958AA /* NASA_APODUITests */,
+				0E7607672FEAAEF500F958AA /* NasaApodUITests */,
 			);
-			name = NASA_APODUITests;
+			name = NasaApodUITests;
 			packageProductDependencies = (
 			);
 			productName = NASA_APODUITests;
-			productReference = 0E7607642FEAAEF500F958AA /* NASA_APODUITests.xctest */;
+			productReference = 0E7607642FEAAEF500F958AA /* NasaApodUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0E7607442FEAAEF300F958AA /* Build configuration list for PBXProject "NASA_APOD" */;
+			buildConfigurationList = 0E7607442FEAAEF300F958AA /* Build configuration list for PBXProject "NasaApod" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -240,9 +240,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0E7607482FEAAEF300F958AA /* NASA_APOD */,
-				0E7607592FEAAEF500F958AA /* NASA_APODTests */,
-				0E7607632FEAAEF500F958AA /* NASA_APODUITests */,
+				0E7607482FEAAEF300F958AA /* NasaApod */,
+				0E7607592FEAAEF500F958AA /* NasaApodTests */,
+				0E7607632FEAAEF500F958AA /* NasaApodUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		0E76075C2FEAAEF500F958AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;
+			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
 			targetProxy = 0E76075B2FEAAEF500F958AA /* PBXContainerItemProxy */;
 		};
 		0E7607662FEAAEF500F958AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E7607482FEAAEF300F958AA /* NASA_APOD */;
+			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
 			targetProxy = 0E7607652FEAAEF500F958AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -316,13 +316,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86SKTK882J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NASA_APOD/App/Resourses/Info.plist;
+				INFOPLIST_FILE = NasaApod/App/Resourses/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Universe ONE";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -362,13 +362,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86SKTK882J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NASA_APOD/App/Resourses/Info.plist;
+				INFOPLIST_FILE = NasaApod/App/Resourses/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Universe ONE";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -538,7 +538,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA_APOD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NASA_APOD";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NasaApod.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NasaApod";
 				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Debug;
@@ -564,7 +564,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA_APOD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NASA_APOD";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NasaApod.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NasaApod";
 				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Release;
@@ -622,7 +622,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E7607442FEAAEF300F958AA /* Build configuration list for PBXProject "NASA_APOD" */ = {
+		0E7607442FEAAEF300F958AA /* Build configuration list for PBXProject "NasaApod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E7607702FEAAEF500F958AA /* Debug */,
@@ -631,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E76076D2FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NASA_APOD" */ = {
+		0E76076D2FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NasaApod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E76076E2FEAAEF500F958AA /* Debug */,
@@ -640,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E7607722FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NASA_APODTests" */ = {
+		0E7607722FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NasaApodTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E7607732FEAAEF500F958AA /* Debug */,
@@ -649,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E7607752FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NASA_APODUITests" */ = {
+		0E7607752FEAAEF500F958AA /* Build configuration list for PBXNativeTarget "NasaApodUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E7607762FEAAEF500F958AA /* Debug */,
