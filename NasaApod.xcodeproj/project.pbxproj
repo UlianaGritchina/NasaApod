@@ -37,14 +37,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0E76076C2FEAAEF500F958AA /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
+		0E68C8BC2FF808100007CC51 /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/Resourses/Info.plist,
-				Packages/Core,
-				Packages/DesignSystem,
-				Packages/Features/APOD,
-				Packages/Shared,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
 		};
@@ -54,7 +50,7 @@
 		0E76074B2FEAAEF300F958AA /* NasaApod */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0E76076C2FEAAEF500F958AA /* Exceptions for "NasaApod" folder in "NasaApod" target */,
+				0E68C8BC2FF808100007CC51 /* Exceptions for "NasaApod" folder in "NasaApod" target */,
 			);
 			path = NasaApod;
 			sourceTree = "<group>";
