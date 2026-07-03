@@ -36,22 +36,9 @@
 		0E7607642FEAAEF500F958AA /* NasaApodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaApodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0E750EB02FF80CEB007643F9 /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0E76074B2FEAAEF300F958AA /* NasaApod */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				0E750EB02FF80CEB007643F9 /* Exceptions for "NasaApod" folder in "NasaApod" target */,
-			);
 			path = NasaApod;
 			sourceTree = "<group>";
 		};
@@ -318,7 +305,6 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NasaApod/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Universe ONE";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -364,7 +350,6 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NasaApod/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Universe ONE";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
