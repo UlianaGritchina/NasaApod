@@ -1,13 +1,13 @@
 //
-//  NASA_APODUITestsLaunchTests.swift
-//  NASA_APODUITests
+//  NasaApodUITestsLaunchTests.swift
+//  NasaApodUITests
 //
 //  Created by Ульяна Гритчина on 23.06.2026.
 //
 
 import XCTest
 
-final class NASA_APODUITestsLaunchTests: XCTestCase {
+final class NasaApodUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,6 +1,6 @@
 //
 //  CoreAssembly.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 03.07.2026.
 //

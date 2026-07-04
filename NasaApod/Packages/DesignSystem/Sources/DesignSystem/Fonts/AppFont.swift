@@ -1,6 +1,6 @@
 //
 //  AppFont.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 30.06.2026.
 //

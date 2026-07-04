@@ -49,11 +49,19 @@ struct ApodInfoView: View {
 extension ApodInfoView {
     @ViewBuilder
     private var imageView: some View {
-        if let imageData, let uiImage = UIImage(data: imageData) {
-            Image(uiImage: uiImage)
+        if let imageData,
+           let platformImage = PlatformImage(data: imageData) {
+#if os(iOS)
+            Image(uiImage: platformImage)
                 .resizable()
                 .frame(height: 350)
                 .cornerRadius(12)
+#elseif os(macOS)
+            Image(nsImage: platformImage)
+                .resizable()
+                .frame(height: 350)
+                .cornerRadius(12)
+#endif
         } else {
             Rectangle()
                 .frame(height: 350)
@@ -63,3 +71,11 @@ extension ApodInfoView {
         }
     }
 }
+
+#if os(iOS)
+import UIKit
+typealias PlatformImage = UIImage
+#elseif os(macOS)
+import AppKit
+typealias PlatformImage = NSImage
+#endif

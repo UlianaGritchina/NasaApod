@@ -9,5 +9,5 @@ import Foundation
 
 public protocol ApodRepository: Sendable {
     func getApod(for date: Date) async throws -> Apod
-    func getApodImage(for url: URL, date: Date) async throws -> Data
+    func getApodImageData(for url: URL, date: Date) async throws -> Data
 }

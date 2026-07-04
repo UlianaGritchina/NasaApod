@@ -1,6 +1,6 @@
 //
 //  ApodViewModel.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 24.06.2026.
 //
@@ -43,7 +43,7 @@ public final class MainApodViewModel {
     
     private func fetchApodImageData(url: URL) async throws {
         apodImageData = nil
-        apodImageData = try await repository.getApodImage(
+        apodImageData = try await repository.getApodImageData(
             for: url,
             date: selectedDate
         )

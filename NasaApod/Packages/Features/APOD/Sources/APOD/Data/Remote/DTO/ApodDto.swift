@@ -1,6 +1,6 @@
 //
 //  ApodDto.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 26.06.2026.
 //

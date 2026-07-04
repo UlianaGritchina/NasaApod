@@ -1,13 +1,13 @@
 //
-//  NASA_APODUITests.swift
-//  NASA_APODUITests
+//  NasaApodUITests.swift
+//  NasaApodDUITests
 //
 //  Created by Ульяна Гритчина on 23.06.2026.
 //
 
 import XCTest
 
-final class NASA_APODUITests: XCTestCase {
+final class NasaApodUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

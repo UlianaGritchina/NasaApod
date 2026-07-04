@@ -1,6 +1,6 @@
 //
 //  ApodAssembly.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
@@ -18,10 +18,14 @@ enum ApodAssembly {
         }
         
         container.register(ApodRepository.self) {
+#if os(macOS) && DEBUG
+            MockApodRepository()
+#else
             ApodRepositoryImpl(
                 apodApi: try! container.resolve(ApodAPI.self),
                 cacheService: try! container.resolve(CacheService.self)
             )
+#endif
         }
     }
 }

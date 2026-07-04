@@ -1,6 +1,6 @@
 //
-//  NASA_APODApp.swift
-//  NASA_APOD
+//  NasaApodApp.swift
+//  NasaApodApp
 //
 //  Created by Ульяна Гритчина on 23.06.2026.
 //
@@ -11,7 +11,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct NASA_APODApp: App {
+struct NasaApodApp: App {
 
     private let container = DependencyContainer()
     private let environment = EnvironmentLoader.load()

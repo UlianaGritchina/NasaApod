@@ -9,9 +9,9 @@ import Foundation
 
 public protocol NetworkMonitor: Sendable {
 
-    /// Current network status
+    /// Current network status.
     var currentStatus: NetworkStatus { get }
 
-    /// A stream of network status updates
+    /// A stream of network status updates.
     var statusUpdates: AsyncStream<NetworkStatus> { get }
 }

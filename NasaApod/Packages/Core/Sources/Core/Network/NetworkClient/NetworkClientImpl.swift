@@ -1,6 +1,6 @@
 //
 //  NetworkClient.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 28.06.2026.
 //

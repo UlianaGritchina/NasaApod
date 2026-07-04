@@ -22,7 +22,7 @@ final class MockApodRepositoryTest: ApodRepository {
         apodResult
     }
     
-    func getApodImage(for url: URL, date: Date) async throws -> Data {
+    func getApodImageData(for url: URL, date: Date) async throws -> Data {
         Data()
     }
 }

@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "DesignSystem",
     platforms: [
-        .iOS(.v17)
+        .iOS(.v17),
+        .macOS(.v15)
     ],
     products: [
         .library(

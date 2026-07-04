@@ -1,6 +1,6 @@
 //
 //  EnvironmentLoader.swift
-//  NASA_APOD
+//  NasaApod
 //
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
