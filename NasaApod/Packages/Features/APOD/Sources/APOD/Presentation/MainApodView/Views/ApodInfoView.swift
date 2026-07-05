@@ -14,19 +14,10 @@ struct ApodInfoView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(apod.title)
-                .font(.appSubTitle)
-            
+            header
             imageView
-            
-            if let copyright = apod.copyright {
-                Text("© \(copyright)")
-                    .font(.appCaption)
-            }
-            
-            Text(apod.explanation)
-                .font(.appBody)
-                .padding(.top, 5)
+            copyright
+            explanation
         }
     }
 }
@@ -47,21 +38,20 @@ struct ApodInfoView: View {
 }
 
 extension ApodInfoView {
+    
+    private var header: some View {
+        Text(apod.title)
+            .font(.appSubTitle)
+    }
+    
     @ViewBuilder
     private var imageView: some View {
         if let imageData,
            let platformImage = PlatformImage(data: imageData) {
-#if os(iOS)
-            Image(uiImage: platformImage)
+            Image(platformImage: platformImage)
                 .resizable()
                 .frame(height: 350)
                 .cornerRadius(12)
-#elseif os(macOS)
-            Image(nsImage: platformImage)
-                .resizable()
-                .frame(height: 350)
-                .cornerRadius(12)
-#endif
         } else {
             Rectangle()
                 .frame(height: 350)
@@ -70,12 +60,18 @@ extension ApodInfoView {
                 .cornerRadius(12)
         }
     }
+    
+    @ViewBuilder
+    private var copyright: some View {
+        if let copyright = apod.copyright {
+            Text("© \(copyright)")
+                .font(.appCaption)
+        }
+    }
+    
+    private var explanation: some View {
+        Text(apod.explanation)
+            .font(.appBody)
+            .padding(.top, 5)
+    }
 }
-
-#if os(iOS)
-import UIKit
-typealias PlatformImage = UIImage
-#elseif os(macOS)
-import AppKit
-typealias PlatformImage = NSImage
-#endif
