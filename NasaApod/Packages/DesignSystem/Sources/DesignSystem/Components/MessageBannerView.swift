@@ -19,25 +19,6 @@ public struct MessageBannerView: View {
     }
     
     public var body: some View {
-        if #available(iOS 26.0, macOS 26.0, *) {
-            baseView
-                .glassEffect()
-        } else {
-            baseView
-        }
-    }
-}
-
-#Preview {
-    MessageBannerView(
-        message: "Hi, my name is...",
-        systemImageName: "tennisball.fill",
-        imageColor: .green
-    )
-}
-
-extension MessageBannerView {
-    private var baseView: some View {
         HStack(spacing: 5) {
             Image(systemName: systemImageName)
                 .foregroundStyle(imageColor)
@@ -52,5 +33,14 @@ extension MessageBannerView {
         }
         .clipShape(.capsule)
         .shadow(color: .secondary.opacity(0.3),radius: 4)
+        .glassModifier()
     }
+}
+
+#Preview {
+    MessageBannerView(
+        message: "Hi, my name is...",
+        systemImageName: "tennisball.fill",
+        imageColor: .green
+    )
 }
