@@ -11,6 +11,7 @@
 		0E37ECE52FF2A368005F4D0B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE42FF2A368005F4D0B /* Core */; };
 		0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4CD3742FF3B75700485651 /* DesignSystem */; };
 		0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB4BE2D2FF2A70B006DA1A6 /* Shared */; };
+		0ECEE4B72FFBF4B500AA0EC1 /* PhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +37,22 @@
 		0E7607642FEAAEF500F958AA /* NasaApodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaApodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0ECEE4B52FFBF40F00AA0EC1 /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Packages/Features/PhotosViewer,
+			);
+			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0E76074B2FEAAEF300F958AA /* NasaApod */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0ECEE4B52FFBF40F00AA0EC1 /* Exceptions for "NasaApod" folder in "NasaApod" target */,
+			);
 			path = NasaApod;
 			sourceTree = "<group>";
 		};
@@ -63,6 +77,7 @@
 				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
 				0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */,
 				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
+				0ECEE4B72FFBF4B500AA0EC1 /* PhotosViewer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +150,7 @@
 				0E37ECE42FF2A368005F4D0B /* Core */,
 				0EB4BE2D2FF2A70B006DA1A6 /* Shared */,
 				0E4CD3742FF3B75700485651 /* DesignSystem */,
+				0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
@@ -657,6 +673,10 @@
 		0EB4BE2D2FF2A70B006DA1A6 /* Shared */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Shared;
+		};
+		0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PhotosViewer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

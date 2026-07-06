@@ -18,7 +18,8 @@ let package = Package(
     dependencies: [
         .package(path: "../Core"),
         .package(path: "../Shared"),
-        .package(path: "../DesignSystem")
+        .package(path: "../DesignSystem"),
+        .package(path: "../PhotosViewer")
     ],
     targets: [
         .target(
@@ -26,7 +27,8 @@ let package = Package(
             dependencies: [
                 .product(name: "Core", package: "Core"),
                 .product(name: "Shared", package: "Shared"),
-                .product(name: "DesignSystem", package: "DesignSystem")
+                .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "PhotosViewer", package: "PhotosViewer")
             ]
         ),
         .testTarget(

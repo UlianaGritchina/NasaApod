@@ -6,18 +6,29 @@
 //
 
 import DesignSystem
+import PhotosViewer
 import SwiftUI
 
 struct ApodInfoView: View {
     let apod: Apod
     let imageData: Data?
     
+    @State private var isOpenImageViewer = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             header
             imageView
+                .onTapGesture {
+                    isOpenImageViewer.toggle()
+                }
             copyright
             explanation
+        }
+        .fullScreenCover(isPresented: $isOpenImageViewer) {
+            if let imageData {
+                PhotosViewer([Photo.data(imageData)], title: apod.title)
+            }
         }
     }
 }
