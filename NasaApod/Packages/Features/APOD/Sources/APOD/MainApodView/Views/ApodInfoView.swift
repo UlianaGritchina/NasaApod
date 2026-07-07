@@ -83,6 +83,6 @@ extension ApodInfoView {
     private var explanation: some View {
         Text(apod.explanation)
             .font(.appBody)
-            .padding(.top, 5)
+            .padding(.top, Spacing.xxs)
     }
 }

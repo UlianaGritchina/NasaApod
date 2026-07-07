@@ -22,10 +22,11 @@ public struct MainApodView: View {
                     datePicker
                     apodContent
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, Spacing.md)
                 .animation(.easeInOut, value: viewModel.viewState)
             }
             .navigationTitle("APOD")
+            .background(DSColor.background)
             .task {
                 await viewModel.fetchApodInfo()
             }

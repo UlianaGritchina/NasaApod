@@ -19,14 +19,14 @@ public struct MessageBannerView: View {
     }
     
     public var body: some View {
-        HStack(spacing: 5) {
+        HStack(spacing: Spacing.xxs) {
             Image(systemName: systemImageName)
                 .foregroundStyle(imageColor)
                 .font(.headline)
             
             Text(message)
         }
-        .padding()
+        .padding(Spacing.md)
         .background {
             Rectangle()
                 .foregroundStyle(.background)

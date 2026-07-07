@@ -4,6 +4,8 @@
 //
 //  Created by Ульяна Гритчина on 06.07.2026.
 //
+
+import DesignSystem
 import SwiftUI
 
 public struct PhotosViewer: View {
@@ -25,6 +27,7 @@ public struct PhotosViewer: View {
                     dismissButton
                     shareButton
                 }
+                .background(DSColor.background)
         }
     }
 }
