@@ -1,5 +1,5 @@
 //
-//  ApodDto.swift
+//  ApodDTO.swift
 //  NasaApod
 //
 //  Created by Ульяна Гритчина on 26.06.2026.
@@ -34,7 +34,7 @@ extension ApodDTO {
             let url = URL(string: self.url),
             let date = self.stringDate.toDate()
         else {
-            throw MappingError.invalidDto
+            throw MappingError.invalidDTO
         }
         
         return Apod(
@@ -50,5 +50,5 @@ extension ApodDTO {
 }
 
 enum MappingError: Error {
-    case invalidDto
+    case invalidDTO
 }

@@ -5,10 +5,8 @@
 //  Created by Ульяна Гритчина on 24.06.2026.
 //
 
-import Core
 import Foundation
 
-@MainActor
 @Observable
 public final class MainApodViewModel {
     
@@ -29,6 +27,7 @@ public final class MainApodViewModel {
         selectedDate.toString(format: .full)
     }
     
+    @MainActor
     func fetchApodInfo() async {
         viewState = .loading
         do {
@@ -41,6 +40,7 @@ public final class MainApodViewModel {
         }
     }
     
+    @MainActor
     private func fetchApodImageData(url: URL) async throws {
         apodImageData = nil
         apodImageData = try await repository.getApodImageData(
