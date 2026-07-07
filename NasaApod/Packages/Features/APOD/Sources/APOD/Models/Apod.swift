@@ -16,7 +16,7 @@ public struct Apod: Equatable, Sendable {
     let copyright: String?
     let hdURL: URL?
     
-    enum MediaType: String, Codable {
+    enum MediaType: String {
         case image
         case video
         case unknown
