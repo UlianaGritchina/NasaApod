@@ -10,8 +10,10 @@
 		0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE12FF2A1D4005F4D0B /* APOD */; };
 		0E37ECE52FF2A368005F4D0B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE42FF2A368005F4D0B /* Core */; };
 		0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4CD3742FF3B75700485651 /* DesignSystem */; };
-		0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB4BE2D2FF2A70B006DA1A6 /* Shared */; };
 		0ECEE4B72FFBF4B500AA0EC1 /* PhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */; };
+		0EE5D9A22FFD0E5B00CC4C96 /* DependencyInjection in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */; };
+		0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A42FFD102400CC4C96 /* MainTabView */; };
+		0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A72FFD112E00CC4C96 /* AppFoundation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,9 @@
 		0ECEE4B52FFBF40F00AA0EC1 /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Packages/AppFoundation,
+				Packages/DependencyInjection,
+				Packages/Features/MainTabView,
 				Packages/Features/PhotosViewer,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
@@ -74,8 +79,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */,
+				0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */,
 				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
-				0EB4BE2E2FF2A70B006DA1A6 /* Shared in Frameworks */,
+				0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */,
+				0EE5D9A22FFD0E5B00CC4C96 /* DependencyInjection in Frameworks */,
 				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
 				0ECEE4B72FFBF4B500AA0EC1 /* PhotosViewer in Frameworks */,
 			);
@@ -148,9 +155,11 @@
 			packageProductDependencies = (
 				0E37ECE12FF2A1D4005F4D0B /* APOD */,
 				0E37ECE42FF2A368005F4D0B /* Core */,
-				0EB4BE2D2FF2A70B006DA1A6 /* Shared */,
 				0E4CD3742FF3B75700485651 /* DesignSystem */,
 				0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */,
+				0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */,
+				0EE5D9A42FFD102400CC4C96 /* MainTabView */,
+				0EE5D9A72FFD112E00CC4C96 /* AppFoundation */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
@@ -670,13 +679,21 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
 		};
-		0EB4BE2D2FF2A70B006DA1A6 /* Shared */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Shared;
-		};
 		0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PhotosViewer;
+		};
+		0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DependencyInjection;
+		};
+		0EE5D9A42FFD102400CC4C96 /* MainTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainTabView;
+		};
+		0EE5D9A72FFD112E00CC4C96 /* AppFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

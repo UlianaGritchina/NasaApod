@@ -4,36 +4,34 @@
 import PackageDescription
 
 let package = Package(
-    name: "APOD",
+    name: "MainTabView",
     platforms: [
         .iOS(.v17),
         .macOS(.v15)
     ],
     products: [
         .library(
-            name: "APOD",
-            targets: ["APOD"]
+            name: "MainTabView",
+            targets: ["MainTabView"]
         ),
     ],
     dependencies: [
+        .package(path: "../APOD"),
         .package(path: "../Core"),
-        .package(path: "../AppFoundation"),
         .package(path: "../DesignSystem"),
-        .package(path: "../PhotosViewer")
     ],
     targets: [
         .target(
-            name: "APOD",
+            name: "MainTabView",
             dependencies: [
+                .product(name: "APOD", package: "APOD"),
                 .product(name: "Core", package: "Core"),
-                .product(name: "AppFoundation", package: "AppFoundation"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
-                .product(name: "PhotosViewer", package: "PhotosViewer")
             ]
         ),
         .testTarget(
-            name: "APODTests",
-            dependencies: ["APOD"]
-        )
+            name: "MainTabViewTests",
+            dependencies: ["MainTabView"]
+        ),
     ]
 )

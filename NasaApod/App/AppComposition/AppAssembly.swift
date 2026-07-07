@@ -5,8 +5,9 @@
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
 
-import Core
 import APOD
+import Core
+import DependencyInjection
 import Foundation
 
 enum AppAssembly {

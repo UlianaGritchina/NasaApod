@@ -6,6 +6,7 @@
 //
 
 import Core
+import DependencyInjection
 import Foundation
 
 enum CoreAssembly {

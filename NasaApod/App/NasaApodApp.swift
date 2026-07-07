@@ -7,8 +7,9 @@
 
 import APOD
 import Core
+import DependencyInjection
+import MainTabView
 import SwiftUI
-import SwiftData
 
 @main
 struct NasaApodApp: App {

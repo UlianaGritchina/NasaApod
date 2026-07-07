@@ -7,6 +7,7 @@
 
 import APOD
 import Core
+import DependencyInjection
 import Foundation
 
 enum ApodAssembly {
