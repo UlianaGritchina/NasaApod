@@ -10,18 +10,14 @@ import Foundation
 @MainActor
 @Observable
 final class PhotosViewerViewModel {
-    let photos: [Photo]
+    let photos: [Data]
     let title: String?
     
     var index = 0
     
-    init(photos: [Photo], title: String?) {
+    init(photos: [Data], title: String?) {
         self.photos = photos
         self.title = title
-    }
-    
-    var currentPhoto: Photo {
-        photos[index]
     }
     
     var navigationTitle: String {

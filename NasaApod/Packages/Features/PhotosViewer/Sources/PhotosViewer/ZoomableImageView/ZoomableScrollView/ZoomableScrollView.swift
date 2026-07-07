@@ -61,19 +61,8 @@ final class ZoomableScrollView: UIScrollView {
         centerImage()
     }
     
-    func setImage(_ photo: Photo) {
-        switch photo {
-        case .data(let data):
-            currentImage = UIImage(data: data)
-            
-        case .url(let url):
-            Task {
-                let (data, _) = try await URLSession.shared.data(from: url)
-                await MainActor.run {
-                    self.currentImage = UIImage(data: data)
-                }
-            }
-        }
+    func setImage(_ photo: Data) {
+        currentImage = UIImage(data: photo)
     }
     
     private func configureImage() {

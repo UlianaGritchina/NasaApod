@@ -13,7 +13,7 @@ public struct PhotosViewer: View {
     
     var viewModel: PhotosViewerViewModel
     
-    public init(_ photos: [Photo], title: String? = nil) {
+    public init(_ photos: [Data], title: String? = nil) {
         viewModel = PhotosViewerViewModel(photos: photos, title: title)
     }
     
@@ -43,26 +43,32 @@ extension PhotosViewer {
     
     private var shareButton: some ToolbarContent {
         ToolbarItem(placement: .primaryAction) {
-            switch viewModel.photos[viewModel.index] {
-            case .data(let data):
+            if let shareImageItem {
                 ShareLink(
-                    item: Image(uiImage: UIImage(data: data)!),
-                    preview: SharePreview(viewModel.navigationTitle, image: Image(uiImage:  UIImage(data: data)!))
+                    item: shareImageItem,
+                    preview: SharePreview(
+                        viewModel.navigationTitle,
+                        image: shareImageItem
+                    )
                 ) {
                     Image(systemName: "square.and.arrow.up")
                 }
-            case .url(_):
-                Text("")
             }
         }
+    }
+    
+    private var shareImageItem: Image? {
+        guard let uiImage = UIImage(data: viewModel.photos[viewModel.index]) else {
+            return nil
+        }
+        return Image(uiImage: uiImage)
     }
     
     private var photosTabView: some View {
         @Bindable var vm = viewModel
         return TabView(selection: $vm.index) {
-            ForEach(viewModel.photos) { photo in
+            ForEach(viewModel.photos, id: \.self) { photo in
                 ZoomableImageView(image: photo)
-                    .tag(photo.id)
             }
         }
         .ignoresSafeArea()

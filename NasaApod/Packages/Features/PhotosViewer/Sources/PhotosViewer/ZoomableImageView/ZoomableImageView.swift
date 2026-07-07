@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ZoomableImageView: UIViewRepresentable {
-    let image: Photo
+    let image: Data
     
     func makeUIView(context: Context) -> ZoomableScrollView {
         let scrollView = ZoomableScrollView()

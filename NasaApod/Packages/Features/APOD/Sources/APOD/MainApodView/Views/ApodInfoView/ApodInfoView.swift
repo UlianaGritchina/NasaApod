@@ -26,7 +26,7 @@ struct ApodInfoView: View {
         }
         .fullScreenCover(isPresented: $vm.isOpenImageViewer) {
             if let imageData = viewModel.imageData {
-                PhotosViewer([Photo.data(imageData)], title: viewModel.title)
+                PhotosViewer([imageData, imageData], title: viewModel.title)
             }
         }
     }
