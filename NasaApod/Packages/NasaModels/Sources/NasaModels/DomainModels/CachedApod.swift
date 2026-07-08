@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CachedApod: Codable {
+public struct CachedApod: Codable {
     let url: URL
     let title: String
     let date: Date
@@ -20,7 +20,7 @@ struct CachedApod: Codable {
 
 extension CachedApod {
 
-    init(apod: Apod) {
+    public init(apod: Apod) {
         self.url = apod.url
         self.title = apod.title
         self.date = apod.date
@@ -31,7 +31,7 @@ extension CachedApod {
         self.cachedAt = Date()
     }
 
-    func toDomain() -> Apod {
+    public func toDomain() -> Apod {
         Apod(
             url: url,
             title: title,

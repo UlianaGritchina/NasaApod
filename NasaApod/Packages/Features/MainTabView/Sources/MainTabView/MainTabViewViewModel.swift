@@ -7,6 +7,7 @@
 
 import APOD
 import Core
+import Explore
 import Foundation
 
 @MainActor
@@ -16,14 +17,17 @@ public final class MainTabViewViewModel {
     private let networkMonitor: NetworkMonitor?
     
     let mainApodViewModel: MainApodViewModel
+    let exploreViewModel: ExploreViewViewModel
     
     var isLostConnection = false
     
     public init(
         apodRepository: ApodRepository,
+        exploreRepository: ExploreRepository,
         networkMonitor: NetworkMonitor?
     ) {
         self.mainApodViewModel = MainApodViewModel(repository: apodRepository)
+        self.exploreViewModel = ExploreViewViewModel(exploreRepository: exploreRepository)
         self.networkMonitor = networkMonitor
     }
     

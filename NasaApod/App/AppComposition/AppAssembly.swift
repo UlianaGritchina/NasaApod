@@ -14,6 +14,7 @@ enum AppAssembly {
     static func register(in container: DependencyContainer, environment: AppEnvironment) {
         CoreAssembly.register(in: container, env: environment)
         ApodAssembly.register(in: container)
+        ExploreAssembly.register(in: container)
     }
 }
 

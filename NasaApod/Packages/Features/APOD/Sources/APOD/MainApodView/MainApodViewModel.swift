@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NasaModels
 
 @Observable
 public final class MainApodViewModel {

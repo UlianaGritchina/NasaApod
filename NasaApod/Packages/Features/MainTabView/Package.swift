@@ -19,6 +19,7 @@ let package = Package(
         .package(path: "../APOD"),
         .package(path: "../Core"),
         .package(path: "../DesignSystem"),
+        .package(path: "../Explore")
     ],
     targets: [
         .target(
@@ -27,6 +28,7 @@ let package = Package(
                 .product(name: "APOD", package: "APOD"),
                 .product(name: "Core", package: "Core"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "Explore", package: "Explore")
             ]
         ),
         .testTarget(

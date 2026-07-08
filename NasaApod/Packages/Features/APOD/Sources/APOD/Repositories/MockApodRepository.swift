@@ -11,6 +11,7 @@ import SwiftUI
 import AppKit
 #endif
 import Foundation
+import NasaModels
 
 public final class MockApodRepository: ApodRepository {
     

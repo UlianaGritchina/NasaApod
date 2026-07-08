@@ -7,6 +7,7 @@
 
 import DesignSystem
 import PhotosViewer
+import NasaModels
 import SwiftUI
 
 struct ApodInfoView: View {
@@ -86,9 +87,6 @@ extension ApodInfoView {
             WebVideoPlayer(url: viewModel.videoUrl)
                 .frame(height: 250)
                 .cornerRadius(10)
-        }
-        .onAppear {
-            print(viewModel.apod.url)
         }
     }
     

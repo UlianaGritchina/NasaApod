@@ -21,7 +21,7 @@ public struct GlassModifier: ViewModifier {
 }
 
 extension View {
-    func glassModifier() -> some View {
+    public func glassModifier() -> some View {
         modifier(GlassModifier())
     }
 }

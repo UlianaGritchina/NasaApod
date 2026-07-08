@@ -8,6 +8,7 @@
 import AppFoundation
 import Core
 import Foundation
+import NasaModels
 
 public final class ApodAPIImpl: ApodAPI {
 

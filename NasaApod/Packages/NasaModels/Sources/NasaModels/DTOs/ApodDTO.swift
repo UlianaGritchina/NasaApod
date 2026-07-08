@@ -29,7 +29,7 @@ public struct ApodDTO: Decodable {
 }
 
 extension ApodDTO {
-    func toDomain() async throws -> Apod {
+    public func toDomain() throws -> Apod {
         guard
             let url = URL(string: self.url),
             let date = self.stringDate.toDate()

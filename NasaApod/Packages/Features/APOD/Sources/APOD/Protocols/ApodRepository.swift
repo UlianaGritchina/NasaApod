@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NasaModels
 
 public protocol ApodRepository: Sendable {
     func getApod(for date: Date) async throws -> Apod

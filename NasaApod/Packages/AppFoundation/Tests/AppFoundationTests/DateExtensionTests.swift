@@ -25,7 +25,9 @@ struct DateExtensionTests {
         (DateFormat.custom("dd/MM/yyyy"), "11/12/2001")
     ])
     func toString(format: DateFormat, expected: String) throws {
-        let result = try testDate.toString(format: format)
+        let date = try testDate
+        
+        let result = date.toString(format: format)
         
         #expect(result == expected)
     }

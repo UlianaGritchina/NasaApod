@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum CacheKey {
+public enum CacheKey {
     case dalyApod(date: String)
     case dalyApodImage(date: String)
     
-    var value: String {
+    public var value: String {
         switch self {
         case .dalyApod(let date):
             "daly_apod_\(date)"

@@ -1,16 +1,15 @@
 //
-//  ApodEndpoint.swift
-//  NasaApod
+//  ExploreEndpoint.swift
+//  Explore
 //
-//  Created by Ульяна Гритчина on 28.06.2026.
+//  Created by Ульяна Гритчина on 08.07.2026.
 //
 
 import Core
 import Foundation
 
-enum ApodEndpoint: Endpoint {
-    
-    case apod(date: String)
+enum ExploreEndpoint: Endpoint {
+    case apodsList(count: Int)
     
     var path: String {
         "/planetary/apod"
@@ -26,7 +25,7 @@ enum ApodEndpoint: Endpoint {
     
     var queryItems: [URLQueryItem] {
         switch self {
-        case .apod(let date): [ URLQueryItem(name: "date", value: date) ]
+        case .apodsList(let count): [ URLQueryItem(name: "count", value: "\(count)")  ]
         }
     }
 }

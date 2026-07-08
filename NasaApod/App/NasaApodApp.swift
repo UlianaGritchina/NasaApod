@@ -8,6 +8,7 @@
 import APOD
 import Core
 import DependencyInjection
+import Explore
 import MainTabView
 import SwiftUI
 
@@ -25,6 +26,7 @@ struct NasaApodApp: App {
         WindowGroup {
             let vm = MainTabViewViewModel(
                 apodRepository: try! container.resolve(ApodRepository.self),
+                exploreRepository: try! container.resolve(ExploreRepository.self),
                 networkMonitor: try? container.resolve(NetworkMonitor.self)
             )
 

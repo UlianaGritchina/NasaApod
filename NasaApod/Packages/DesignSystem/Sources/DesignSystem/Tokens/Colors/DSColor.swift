@@ -12,4 +12,8 @@ public enum DSColor {
         ColorName.appBackground.rawValue,
         bundle: .module
     )
+    public static let cardBackground = Color(
+        ColorName.cardBackground.rawValue,
+        bundle: .module
+    )
 }

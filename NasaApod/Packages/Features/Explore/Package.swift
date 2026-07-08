@@ -4,15 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "APOD",
+    name: "Explore",
     platforms: [
         .iOS(.v17),
         .macOS(.v15)
     ],
     products: [
+        
         .library(
-            name: "APOD",
-            targets: ["APOD"]
+            name: "Explore",
+            targets: ["Explore"]
         ),
     ],
     dependencies: [
@@ -20,24 +21,22 @@ let package = Package(
         .package(path: "../AppFoundation"),
         .package(path: "../DesignSystem"),
         .package(path: "../PhotosViewer"),
-        .package(path: "../NasaModels"),
-        .package(path: "../Explore")
+        .package(path: "../NasaModels")
     ],
     targets: [
         .target(
-            name: "APOD",
+            name: "Explore",
             dependencies: [
                 .product(name: "Core", package: "Core"),
                 .product(name: "AppFoundation", package: "AppFoundation"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "PhotosViewer", package: "PhotosViewer"),
-                .product(name: "NasaModels", package: "NasaModels"),
-                .product(name: "Explore", package: "Explore")
+                .product(name: "NasaModels", package: "NasaModels")
             ]
         ),
         .testTarget(
-            name: "APODTests",
-            dependencies: ["APOD"]
-        )
+            name: "ExploreTests",
+            dependencies: ["Explore"]
+        ),
     ]
 )

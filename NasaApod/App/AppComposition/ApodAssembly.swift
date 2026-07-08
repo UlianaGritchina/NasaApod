@@ -8,6 +8,7 @@
 import APOD
 import Core
 import DependencyInjection
+import Explore
 import Foundation
 
 enum ApodAssembly {
@@ -30,3 +31,5 @@ enum ApodAssembly {
         }
     }
 }
+
+

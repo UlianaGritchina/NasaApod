@@ -8,6 +8,7 @@
 import APOD
 import Core
 import DesignSystem
+import Explore
 import SwiftUI
 
 public struct MainTabView: View {
@@ -23,6 +24,11 @@ public struct MainTabView: View {
             MainApodView(viewModel.mainApodViewModel)
                 .tabItem {
                     Label("Apod", systemImage: "moon.stars")
+                }
+            
+            ExploreView(viewModel: viewModel.exploreViewModel)
+                .tabItem {
+                    Label("Explore", systemImage: "binoculars")
                 }
         }
         .overlay(alignment: .top) {

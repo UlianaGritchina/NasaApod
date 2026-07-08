@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NasaModels
 
 enum MainApodViewState: Equatable {
     case loading

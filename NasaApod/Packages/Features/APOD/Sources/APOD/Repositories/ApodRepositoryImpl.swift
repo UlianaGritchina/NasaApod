@@ -7,6 +7,7 @@
 
 import Core
 import Foundation
+import NasaModels
 
 public final class ApodRepositoryImpl: ApodRepository {
     
