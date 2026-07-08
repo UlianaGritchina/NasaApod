@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DateFormat {
+public enum DateFormat: Sendable {
     /// yyyy-MM-dd (2026-12-11)
     case base
     
