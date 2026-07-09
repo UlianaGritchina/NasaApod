@@ -6,7 +6,7 @@
 //
 
 import DesignSystem
-import PhotosViewer
+import MediaKit
 import NasaModels
 import SwiftUI
 
@@ -74,7 +74,7 @@ extension ApodInfoView {
                     .frame(height: 350)
                     .cornerRadius(12)
             } else {
-                mediaPreview
+                MediaPlaceholder()
             }
         }
         .onTapGesture {
@@ -88,14 +88,6 @@ extension ApodInfoView {
                 .frame(height: 250)
                 .cornerRadius(10)
         }
-    }
-    
-    private var mediaPreview: some View {
-        Rectangle()
-            .frame(height: 350)
-            .opacity(0)
-            .background(.ultraThinMaterial)
-            .cornerRadius(12)
     }
     
     @ViewBuilder

@@ -13,7 +13,7 @@
 		0E3919572FFE8D2A00B982A0 /* NasaModels in Frameworks */ = {isa = PBXBuildFile; productRef = 0E3919562FFE8D2A00B982A0 /* NasaModels */; };
 		0E3919592FFE8FA400B982A0 /* ExploreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3919582FFE8FA400B982A0 /* ExploreAPI.swift */; };
 		0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4CD3742FF3B75700485651 /* DesignSystem */; };
-		0ECEE4B72FFBF4B500AA0EC1 /* PhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */; };
+		0E4FDDC22FFFCB640098E4EF /* MediaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4FDDC12FFFCB640098E4EF /* MediaKit */; };
 		0EE5D9A22FFD0E5B00CC4C96 /* DependencyInjection in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */; };
 		0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A42FFD102400CC4C96 /* MainTabView */; };
 		0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A72FFD112E00CC4C96 /* AppFoundation */; };
@@ -51,7 +51,7 @@
 				Packages/DependencyInjection,
 				Packages/Features/Explore,
 				Packages/Features/MainTabView,
-				Packages/Features/PhotosViewer,
+				Packages/MediaKit,
 				Packages/NasaModels,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
@@ -85,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */,
+				0E4FDDC22FFFCB640098E4EF /* MediaKit in Frameworks */,
 				0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */,
 				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
 				0E3919572FFE8D2A00B982A0 /* NasaModels in Frameworks */,
@@ -92,7 +93,6 @@
 				0EE5D9A22FFD0E5B00CC4C96 /* DependencyInjection in Frameworks */,
 				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
 				0E3919542FFE808900B982A0 /* Explore in Frameworks */,
-				0ECEE4B72FFBF4B500AA0EC1 /* PhotosViewer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,12 +165,12 @@
 				0E37ECE12FF2A1D4005F4D0B /* APOD */,
 				0E37ECE42FF2A368005F4D0B /* Core */,
 				0E4CD3742FF3B75700485651 /* DesignSystem */,
-				0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */,
 				0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */,
 				0EE5D9A42FFD102400CC4C96 /* MainTabView */,
 				0EE5D9A72FFD112E00CC4C96 /* AppFoundation */,
 				0E3919532FFE808900B982A0 /* Explore */,
 				0E3919562FFE8D2A00B982A0 /* NasaModels */,
+				0E4FDDC12FFFCB640098E4EF /* MediaKit */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
@@ -699,9 +699,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
 		};
-		0ECEE4B62FFBF4B500AA0EC1 /* PhotosViewer */ = {
+		0E4FDDC12FFFCB640098E4EF /* MediaKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = PhotosViewer;
+			productName = MediaKit;
 		};
 		0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */ = {
 			isa = XCSwiftPackageProductDependency;

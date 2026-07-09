@@ -4,30 +4,30 @@
 import PackageDescription
 
 let package = Package(
-    name: "PhotosViewer",
+    name: "MediaKit",
     platforms: [
         .iOS(.v17),
         .macOS(.v15)
     ],
     products: [
         .library(
-            name: "PhotosViewer",
-            targets: ["PhotosViewer"]
+            name: "MediaKit",
+            targets: ["MediaKit"]
         ),
     ],
     dependencies: [
-        .package(path: "../DesignSystem")
+        .package(path: "../DesignSystem"),
     ],
     targets: [
         .target(
-            name: "PhotosViewer",
+            name: "MediaKit",
             dependencies: [
-                .product(name: "DesignSystem", package: "DesignSystem")
+                .product(name: "DesignSystem", package: "DesignSystem"),
             ]
         ),
         .testTarget(
-            name: "PhotosViewerTests",
-            dependencies: ["PhotosViewer"]
+            name: "MediaKitTests",
+            dependencies: ["MediaKit"]
         ),
     ]
 )

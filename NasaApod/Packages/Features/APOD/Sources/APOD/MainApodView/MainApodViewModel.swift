@@ -28,8 +28,13 @@ public final class MainApodViewModel {
         selectedDate.toString(format: .full)
     }
     
+    private var isNeedToUpdateApod: Bool {
+        !(apod?.date.isSameDay(as: selectedDate) ?? false)
+    }
+    
     @MainActor
     func fetchApodInfo() async {
+        guard isNeedToUpdateApod else { return }
         viewState = .loading
         do {
             let apod = try await repository.getApod(for: selectedDate)

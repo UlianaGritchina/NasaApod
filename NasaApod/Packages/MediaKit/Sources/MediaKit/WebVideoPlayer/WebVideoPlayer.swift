@@ -8,11 +8,14 @@
 import SwiftUI
 import WebKit
 
-struct WebVideoPlayer: UIViewRepresentable {
-
-    let url: URL
-
-    func makeUIView(context: Context) -> WKWebView {
+public struct WebVideoPlayer: UIViewRepresentable {
+    public let url: URL
+    
+    public init(url: URL) {
+        self.url = url
+    }
+    
+    public func makeUIView(context: Context) -> WKWebView {
         let configuration = WKWebViewConfiguration()
         configuration.allowsInlineMediaPlayback = true
         let webView = WKWebView(
@@ -24,5 +27,5 @@ struct WebVideoPlayer: UIViewRepresentable {
         return webView
     }
     
-    func updateUIView(_ webView: WKWebView, context: Context) {}
+    public func updateUIView(_ webView: WKWebView, context: Context) {}
 }

@@ -7,35 +7,88 @@
 
 import DesignSystem
 import SwiftUI
+import MediaKit
 import NasaModels
 
 struct ApodRow: View {
     let apod: Apod
     var body: some View {
-        VStack {
-            AsyncImage(url: apod.url) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity)
-                    .cornerRadius(10)
-            } placeholder: {
-                ProgressView()
-            }
-            HStack(alignment: .top) {
-                Text(apod.title)
-                    .font(.headline)
-                Spacer()
-                Text(apod.date.toString(format: .full))
-                    .font(.subheadline)
-            }
+        VStack(spacing: Spacing.xxs) {
+            mediaContent
+            info
         }
-        .padding(Spacing.xs)
         .background(DSColor.cardBackground)
         .cornerRadius(8)
     }
 }
 
-//#Preview {
-//    ApodRow(apod: )
-//}
+#Preview {
+    ApodRow(
+        apod: Apod(
+            url: URL(string: "https://apod.nasa.gov/apod/image/2606/AR4478_vidal_960.jpg")!,
+            title: "Moon",
+            date: Date(),
+            explanation: "",
+            mediaType: .image,
+            copyright: "Uliana",
+            hdURL: nil
+        )
+    )
+}
+
+extension ApodRow {
+    @ViewBuilder
+    private var mediaContent: some View {
+        switch apod.mediaType {
+        case .image:
+            imageView
+        case .video:
+            videoView
+        case .unknown:
+            MediaPlaceholder()
+        }
+    }
+    
+    private var imageView: some View {
+        AsyncImage(
+            url: apod.url,
+            transaction: Transaction(animation: .easeInOut(duration: 0.35))
+        ) { phase in
+            switch phase {
+            case .empty:
+                MediaPlaceholder()
+
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+                    .cornerRadius(10)
+                    .transition(.opacity)
+
+            case .failure:
+                MediaPlaceholder()
+
+            @unknown default:
+                EmptyView()
+            }
+        }
+    }
+    
+    private var videoView: some View {
+        WebVideoPlayer(url: apod.url)
+            .frame(height: 250)
+            .cornerRadius(10)
+    }
+    
+    private var info: some View {
+        HStack(alignment: .top) {
+            Text(apod.title)
+                .font(.headline)
+            Spacer()
+            Text(apod.date.toString(format: .full))
+                .font(.subheadline)
+        }
+        .padding([.horizontal, .bottom], Spacing.xxs)
+    }
+}

@@ -18,21 +18,11 @@ public struct ExploreView: View {
     
     public var body: some View {
         NavigationStack {
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    if let apods = viewModel.apods {
-                        ForEach(apods, id: \.date) { apod in
-                            ApodRow(apod: apod)
-                        }
-                    } else {
-                        ProgressView()
-                    }
-                }
-                .padding([.horizontal, .bottom], Spacing.md)
-                .padding(.top, Spacing.xxs)
+            ZStack {
+                background
+                apodsScroll
             }
             .navigationTitle("Explore")
-            .background(DSColor.background)
             .task {
                 await viewModel.fetchApods()
             }
@@ -40,6 +30,30 @@ public struct ExploreView: View {
     }
 }
 
-//#Preview {
-//    ExploreView(viewModel: ExploreViewViewModel(exploreRepository: E))
-//}
+extension ExploreView {
+    private var background: some View {
+        DSColor.background
+            .ignoresSafeArea()
+    }
+    
+    private var apodsScroll: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVStack(spacing: Spacing.xs) {
+                if !viewModel.apods.isEmpty {
+                    ForEach(viewModel.apods, id: \.date) { apod in
+                        ApodRow(apod: apod)
+                            .task {
+                                await viewModel.loadNextPageIfNeeded(
+                                    currentItem: apod
+                                )
+                            }
+                    }
+                } else {
+                    ProgressView()
+                }
+            }
+            .padding([.horizontal, .bottom], Spacing.md)
+            .padding(.top, Spacing.xxs)
+        }
+    }
+}

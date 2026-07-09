@@ -20,7 +20,7 @@ let package = Package(
         .package(path: "../Core"),
         .package(path: "../AppFoundation"),
         .package(path: "../DesignSystem"),
-        .package(path: "../PhotosViewer"),
+        .package(path: "../MediaKit"),
         .package(path: "../NasaModels")
     ],
     targets: [
@@ -30,7 +30,7 @@ let package = Package(
                 .product(name: "Core", package: "Core"),
                 .product(name: "AppFoundation", package: "AppFoundation"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
-                .product(name: "PhotosViewer", package: "PhotosViewer"),
+                .product(name: "MediaKit", package: "MediaKit"),
                 .product(name: "NasaModels", package: "NasaModels")
             ]
         ),
