@@ -33,7 +33,7 @@ public struct MessageBannerView: View {
         }
         .clipShape(.capsule)
         .shadow(color: .secondary.opacity(0.3),radius: 4)
-        .glassModifier()
+        .glassBackground(shape: .capsule)
     }
 }
 

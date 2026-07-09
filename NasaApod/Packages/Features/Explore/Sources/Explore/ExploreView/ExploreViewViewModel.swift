@@ -5,11 +5,6 @@
 //  Created by Ульяна Гритчина on 08.07.2026.
 //
 
-import Core
-import Foundation
-import NasaModels
-
-import Core
 import Foundation
 import NasaModels
 
@@ -30,6 +25,11 @@ public final class ExploreViewViewModel {
     @MainActor
     func fetchApods() async {
         guard apods.isEmpty else { return }
+        do {
+            apods = try repository.fetchCachedApods()
+        } catch {
+            print(error)
+        }
         await loadNextPage()
     }
 

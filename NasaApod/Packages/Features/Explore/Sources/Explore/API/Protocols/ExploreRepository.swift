@@ -10,4 +10,5 @@ import NasaModels
 
 public protocol ExploreRepository: Sendable {
     func fetchApods(count: Int) async throws -> [Apod]
+    func fetchCachedApods() throws -> [Apod]
 }

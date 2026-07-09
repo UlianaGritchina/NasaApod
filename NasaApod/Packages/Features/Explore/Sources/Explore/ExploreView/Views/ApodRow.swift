@@ -17,8 +17,7 @@ struct ApodRow: View {
             mediaContent
             info
         }
-        .background(DSColor.cardBackground)
-        .cornerRadius(8)
+        .glassBackground(shape: RoundedRectangle(cornerRadius: 8))
     }
 }
 

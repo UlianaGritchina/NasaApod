@@ -19,7 +19,10 @@ enum ExploreAssembly {
         }
         
         container.register(ExploreRepository.self) {
-            ExploreRepositoryImpl(exploreAPI: try! container.resolve(ExploreAPI.self))
+            ExploreRepositoryImpl(
+                exploreAPI: try! container.resolve(ExploreAPI.self),
+                cacheService: try! container.resolve(CacheService.self)
+            )
         }
     }
 }
