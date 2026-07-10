@@ -5,6 +5,7 @@
 //  Created by Ульяна Гритчина on 24.06.2026.
 //
 
+import ApodData
 import DesignSystem
 import SwiftUI
 

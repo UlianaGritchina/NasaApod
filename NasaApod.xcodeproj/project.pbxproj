@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2402A2300105E800A46D20 /* ApodData in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2402A1300105E800A46D20 /* ApodData */; };
+		0E2402A4300105FA00A46D20 /* ApodDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2402A3300105FA00A46D20 /* ApodDomain */; };
+		0E377BE530010D8900931F82 /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 0E377BE430010D8900931F82 /* DependencyContainer */; };
 		0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE12FF2A1D4005F4D0B /* APOD */; };
 		0E37ECE52FF2A368005F4D0B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE42FF2A368005F4D0B /* Core */; };
 		0E3919542FFE808900B982A0 /* Explore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E3919532FFE808900B982A0 /* Explore */; };
-		0E3919572FFE8D2A00B982A0 /* NasaModels in Frameworks */ = {isa = PBXBuildFile; productRef = 0E3919562FFE8D2A00B982A0 /* NasaModels */; };
 		0E3919592FFE8FA400B982A0 /* ExploreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3919582FFE8FA400B982A0 /* ExploreAPI.swift */; };
 		0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4CD3742FF3B75700485651 /* DesignSystem */; };
 		0E4FDDC22FFFCB640098E4EF /* MediaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4FDDC12FFFCB640098E4EF /* MediaKit */; };
-		0EE5D9A22FFD0E5B00CC4C96 /* DependencyInjection in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */; };
 		0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A42FFD102400CC4C96 /* MainTabView */; };
 		0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A72FFD112E00CC4C96 /* AppFoundation */; };
 /* End PBXBuildFile section */
@@ -47,12 +48,13 @@
 		0ECEE4B52FFBF40F00AA0EC1 /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Packages/ApodData,
+				Packages/ApodDomain,
 				Packages/AppFoundation,
-				Packages/DependencyInjection,
+				Packages/DependencyContainer,
 				Packages/Features/Explore,
 				Packages/Features/MainTabView,
 				Packages/MediaKit,
-				Packages/NasaModels,
 			);
 			target = 0E7607482FEAAEF300F958AA /* NasaApod */;
 		};
@@ -87,10 +89,11 @@
 				0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */,
 				0E4FDDC22FFFCB640098E4EF /* MediaKit in Frameworks */,
 				0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */,
+				0E377BE530010D8900931F82 /* DependencyContainer in Frameworks */,
 				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
-				0E3919572FFE8D2A00B982A0 /* NasaModels in Frameworks */,
 				0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */,
-				0EE5D9A22FFD0E5B00CC4C96 /* DependencyInjection in Frameworks */,
+				0E2402A2300105E800A46D20 /* ApodData in Frameworks */,
+				0E2402A4300105FA00A46D20 /* ApodDomain in Frameworks */,
 				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
 				0E3919542FFE808900B982A0 /* Explore in Frameworks */,
 			);
@@ -165,12 +168,13 @@
 				0E37ECE12FF2A1D4005F4D0B /* APOD */,
 				0E37ECE42FF2A368005F4D0B /* Core */,
 				0E4CD3742FF3B75700485651 /* DesignSystem */,
-				0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */,
 				0EE5D9A42FFD102400CC4C96 /* MainTabView */,
 				0EE5D9A72FFD112E00CC4C96 /* AppFoundation */,
 				0E3919532FFE808900B982A0 /* Explore */,
-				0E3919562FFE8D2A00B982A0 /* NasaModels */,
 				0E4FDDC12FFFCB640098E4EF /* MediaKit */,
+				0E2402A1300105E800A46D20 /* ApodData */,
+				0E2402A3300105FA00A46D20 /* ApodDomain */,
+				0E377BE430010D8900931F82 /* DependencyContainer */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
@@ -679,6 +683,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0E2402A1300105E800A46D20 /* ApodData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ApodData;
+		};
+		0E2402A3300105FA00A46D20 /* ApodDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ApodDomain;
+		};
+		0E377BE430010D8900931F82 /* DependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DependencyContainer;
+		};
 		0E37ECE12FF2A1D4005F4D0B /* APOD */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = APOD;
@@ -691,10 +707,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Explore;
 		};
-		0E3919562FFE8D2A00B982A0 /* NasaModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NasaModels;
-		};
 		0E4CD3742FF3B75700485651 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
@@ -702,10 +714,6 @@
 		0E4FDDC12FFFCB640098E4EF /* MediaKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MediaKit;
-		};
-		0EE5D9A12FFD0E5B00CC4C96 /* DependencyInjection */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DependencyInjection;
 		};
 		0EE5D9A42FFD102400CC4C96 /* MainTabView */ = {
 			isa = XCSwiftPackageProductDependency;

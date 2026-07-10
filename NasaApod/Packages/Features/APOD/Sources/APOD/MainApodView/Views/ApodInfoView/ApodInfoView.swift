@@ -5,9 +5,9 @@
 //  Created by Ульяна Гритчина on 29.06.2026.
 //
 
+import ApodDomain
 import DesignSystem
 import MediaKit
-import NasaModels
 import SwiftUI
 
 struct ApodInfoView: View {

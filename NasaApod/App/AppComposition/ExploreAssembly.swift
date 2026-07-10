@@ -6,7 +6,7 @@
 //
 
 import Core
-import DependencyInjection
+import DependencyContainer
 import Explore
 import Foundation
 

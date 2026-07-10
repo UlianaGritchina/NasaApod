@@ -7,7 +7,7 @@
 
 import Core
 import Foundation
-import NasaModels
+import ApodData
 
 public final class ExploreAPIImpl: ExploreAPI {
     private let networkClient: NetworkClient

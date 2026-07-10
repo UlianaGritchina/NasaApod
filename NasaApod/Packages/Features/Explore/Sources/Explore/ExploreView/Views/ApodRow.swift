@@ -8,7 +8,7 @@
 import DesignSystem
 import SwiftUI
 import MediaKit
-import NasaModels
+import ApodDomain
 
 struct ApodRow: View {
     let apod: Apod

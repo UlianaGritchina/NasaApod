@@ -6,8 +6,9 @@
 //
 
 import APOD
+import ApodDomain
 import Core
-import DependencyInjection
+import DependencyContainer
 import Explore
 import MainTabView
 import SwiftUI

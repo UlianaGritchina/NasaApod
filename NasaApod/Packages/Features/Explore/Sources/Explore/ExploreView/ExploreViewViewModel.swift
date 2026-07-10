@@ -5,9 +5,8 @@
 //  Created by Ульяна Гритчина on 08.07.2026.
 //
 
+import ApodDomain
 import Foundation
-import NasaModels
-
 @Observable
 public final class ExploreViewViewModel {
 

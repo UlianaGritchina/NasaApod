@@ -20,8 +20,9 @@ let package = Package(
         .package(path: "../AppFoundation"),
         .package(path: "../DesignSystem"),
         .package(path: "../MediaKit"),
-        .package(path: "../NasaModels"),
-        .package(path: "../Explore")
+        .package(path: "../Explore"),
+        .package(path: "../ApodData"),
+        .package(path: "../ApodDomain")
     ],
     targets: [
         .target(
@@ -31,8 +32,9 @@ let package = Package(
                 .product(name: "AppFoundation", package: "AppFoundation"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "MediaKit", package: "MediaKit"),
-                .product(name: "NasaModels", package: "NasaModels"),
-                .product(name: "Explore", package: "Explore")
+                .product(name: "Explore", package: "Explore"),
+                .product(name: "ApodData", package: "ApodData"),
+                .product(name: "ApodDomain", package: "ApodDomain")
             ]
         ),
         .testTarget(

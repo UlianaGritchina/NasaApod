@@ -7,7 +7,7 @@
 
 import Core
 import Foundation
-import NasaModels
+import ApodDomain
 
 public final class ExploreRepositoryImpl: ExploreRepository {
     let exploreAPI: ExploreAPI
