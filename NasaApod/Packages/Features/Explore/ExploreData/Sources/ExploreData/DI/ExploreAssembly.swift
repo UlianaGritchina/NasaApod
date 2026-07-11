@@ -7,11 +7,11 @@
 
 import Core
 import DependencyContainer
-import Explore
+import ExploreDomain
 import Foundation
 
-enum ExploreAssembly {
-    static func register(in container: DependencyContainer) {
+public enum ExploreAssembly {
+    public static func register(in container: DependencyContainer) {
         container.register(ExploreAPI.self) {
             ExploreAPIImpl(
                 networkClient: try! container.resolve(NetworkClient.self)

@@ -8,6 +8,6 @@
 import Foundation
 import ApodData
 
-public protocol ExploreAPI: Sendable {
+protocol ExploreAPI: Sendable {
     func getApods(count: Int) async throws -> [ApodDTO]
 }

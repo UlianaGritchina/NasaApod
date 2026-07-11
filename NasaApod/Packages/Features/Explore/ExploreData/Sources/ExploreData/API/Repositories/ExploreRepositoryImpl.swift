@@ -6,19 +6,20 @@
 //
 
 import Core
+import ExploreDomain
 import Foundation
 import ApodDomain
 
-public final class ExploreRepositoryImpl: ExploreRepository {
+final class ExploreRepositoryImpl: ExploreRepository {
     let exploreAPI: ExploreAPI
     let cacheService: CacheService
     
-    public init(exploreAPI: ExploreAPI, cacheService: CacheService) {
+    init(exploreAPI: ExploreAPI, cacheService: CacheService) {
         self.exploreAPI = exploreAPI
         self.cacheService = cacheService
     }
     
-    public func fetchApods(count: Int) async throws -> [Apod] {
+    func fetchApods(count: Int) async throws -> [Apod] {
         let cacheKey = CacheKey.apodsList.value
         
         let apodsDto = try await exploreAPI.getApods(count: count)
@@ -30,7 +31,7 @@ public final class ExploreRepositoryImpl: ExploreRepository {
         return apods
     }
     
-    public func fetchCachedApods() throws -> [Apod] {
+    func fetchCachedApods() throws -> [Apod] {
         let cacheKey = CacheKey.apodsList.value
         
         if let cachedApods = try? cacheService.get(cacheKey, as: [CachedApod].self) {

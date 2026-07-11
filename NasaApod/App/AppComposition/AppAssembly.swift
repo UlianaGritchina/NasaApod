@@ -8,6 +8,7 @@
 import APOD
 import ApodData
 import Core
+import ExploreData
 import DependencyContainer
 import Foundation
 

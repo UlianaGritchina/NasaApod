@@ -9,6 +9,7 @@ import APOD
 import ApodDomain
 import Core
 import Explore
+import ExploreDomain
 import Foundation
 
 @MainActor

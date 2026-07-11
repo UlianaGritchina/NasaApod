@@ -10,6 +10,8 @@
 		0E2402A2300105E800A46D20 /* ApodData in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2402A1300105E800A46D20 /* ApodData */; };
 		0E2402A4300105FA00A46D20 /* ApodDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2402A3300105FA00A46D20 /* ApodDomain */; };
 		0E377BE530010D8900931F82 /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 0E377BE430010D8900931F82 /* DependencyContainer */; };
+		0E377C283001362000931F82 /* ExploreData in Frameworks */ = {isa = PBXBuildFile; productRef = 0E377C273001362000931F82 /* ExploreData */; };
+		0E377C2A3001362500931F82 /* ExploreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 0E377C293001362500931F82 /* ExploreDomain */; };
 		0E37ECE22FF2A1D4005F4D0B /* APOD in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE12FF2A1D4005F4D0B /* APOD */; };
 		0E37ECE52FF2A368005F4D0B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 0E37ECE42FF2A368005F4D0B /* Core */; };
 		0E3919542FFE808900B982A0 /* Explore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E3919532FFE808900B982A0 /* Explore */; };
@@ -48,11 +50,13 @@
 		0ECEE4B52FFBF40F00AA0EC1 /* Exceptions for "NasaApod" folder in "NasaApod" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Packages/ApodData,
-				Packages/ApodDomain,
 				Packages/AppFoundation,
 				Packages/DependencyContainer,
-				Packages/Features/Explore,
+				Packages/Features/APOD/ApodData,
+				Packages/Features/APOD/ApodDomain,
+				Packages/Features/Explore/Explore,
+				Packages/Features/Explore/ExploreData,
+				Packages/Features/Explore/ExploreDomain,
 				Packages/Features/MainTabView,
 				Packages/MediaKit,
 			);
@@ -93,6 +97,8 @@
 				0E37ECE52FF2A368005F4D0B /* Core in Frameworks */,
 				0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */,
 				0E2402A2300105E800A46D20 /* ApodData in Frameworks */,
+				0E377C283001362000931F82 /* ExploreData in Frameworks */,
+				0E377C2A3001362500931F82 /* ExploreDomain in Frameworks */,
 				0E2402A4300105FA00A46D20 /* ApodDomain in Frameworks */,
 				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
 				0E3919542FFE808900B982A0 /* Explore in Frameworks */,
@@ -175,6 +181,8 @@
 				0E2402A1300105E800A46D20 /* ApodData */,
 				0E2402A3300105FA00A46D20 /* ApodDomain */,
 				0E377BE430010D8900931F82 /* DependencyContainer */,
+				0E377C273001362000931F82 /* ExploreData */,
+				0E377C293001362500931F82 /* ExploreDomain */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
@@ -694,6 +702,14 @@
 		0E377BE430010D8900931F82 /* DependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DependencyContainer;
+		};
+		0E377C273001362000931F82 /* ExploreData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ExploreData;
+		};
+		0E377C293001362500931F82 /* ExploreDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ExploreDomain;
 		};
 		0E37ECE12FF2A1D4005F4D0B /* APOD */ = {
 			isa = XCSwiftPackageProductDependency;

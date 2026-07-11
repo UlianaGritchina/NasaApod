@@ -5,11 +5,10 @@
 //  Created by Ульяна Гритчина on 23.06.2026.
 //
 
-import APOD
 import ApodDomain
 import Core
 import DependencyContainer
-import Explore
+import ExploreDomain
 import MainTabView
 import SwiftUI
 

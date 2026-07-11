@@ -21,7 +21,8 @@ let package = Package(
         .package(path: "../AppFoundation"),
         .package(path: "../DesignSystem"),
         .package(path: "../MediaKit"),
-        .package(path: "../ApodData")
+        .package(path: "../ApodData"),
+        .package(path: "../ExploreDomain")
     ],
     targets: [
         .target(
@@ -31,7 +32,8 @@ let package = Package(
                 .product(name: "AppFoundation", package: "AppFoundation"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "MediaKit", package: "MediaKit"),
-                .product(name: "ApodData", package: "ApodData")
+                .product(name: "ApodData", package: "ApodData"),
+                .product(name: "ExploreDomain", package: "ExploreDomain")
             ]
         ),
         .testTarget(

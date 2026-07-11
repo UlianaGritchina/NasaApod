@@ -9,14 +9,14 @@ import Core
 import Foundation
 import ApodData
 
-public final class ExploreAPIImpl: ExploreAPI {
+final class ExploreAPIImpl: ExploreAPI {
     private let networkClient: NetworkClient
     
-    public init(networkClient: NetworkClient) {
+    init(networkClient: NetworkClient) {
         self.networkClient = networkClient
     }
     
-    public func getApods(count: Int) async throws -> [ApodDTO] {
+    func getApods(count: Int) async throws -> [ApodDTO] {
         let endPoint = ExploreEndpoint.apodsList(count: count)
         let apodsResponse = try await networkClient.request(
             endPoint,

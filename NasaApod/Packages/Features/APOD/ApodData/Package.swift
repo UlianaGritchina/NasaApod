@@ -18,12 +18,14 @@ let package = Package(
     dependencies: [
         .package(path: "../ApodDomain"),
         .package(path: "../DependencyContainer"),
+        .package(path: "../AppFoundation")
     ],
     targets: [
         .target(
             name: "ApodData",
             dependencies: [
                 .product(name: "ApodDomain", package: "ApodDomain"),
+                .product(name: "AppFoundation", package: "AppFoundation"),
                 .product(name: "DependencyContainer", package: "DependencyContainer")
             ]
         ),

@@ -5,6 +5,7 @@
 //  Created by Ульяна Гритчина on 08.07.2026.
 //
 
+import AppFoundation
 import DesignSystem
 import SwiftUI
 import MediaKit
