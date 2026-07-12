@@ -85,10 +85,14 @@ extension ApodRow {
         HStack(alignment: .top) {
             Text(apod.title)
                 .font(.headline)
+                .multilineTextAlignment(.leading)
+            
             Spacer()
+            
             Text(apod.date.toString(format: .full))
                 .font(.subheadline)
         }
+        .foregroundStyle(DSColor.text)
         .padding([.horizontal, .bottom], Spacing.xxs)
     }
 }

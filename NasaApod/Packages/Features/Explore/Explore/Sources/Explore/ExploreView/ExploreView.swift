@@ -5,6 +5,7 @@
 //  Created by Ульяна Гритчина on 08.07.2026.
 //
 
+import ApodDetail
 import DesignSystem
 import SwiftUI
 
@@ -41,12 +42,14 @@ extension ExploreView {
             LazyVStack(spacing: Spacing.xs) {
                 if !viewModel.apods.isEmpty {
                     ForEach(viewModel.apods, id: \.date) { apod in
-                        ApodRow(apod: apod)
-                            .task {
-                                await viewModel.loadNextPageIfNeeded(
-                                    currentItem: apod
-                                )
-                            }
+                        NavigationLink(destination: ApodDetailView(apod: apod)) {
+                            ApodRow(apod: apod)
+                                .task {
+                                    await viewModel.loadNextPageIfNeeded(
+                                        currentItem: apod
+                                    )
+                                }
+                        }
                     }
                 } else {
                     ProgressView()

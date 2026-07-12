@@ -10,4 +10,6 @@ import Foundation
 enum ColorName: String {
     case appBackground = "appBackground"
     case cardBackground = "cardBackground"
+    case text = "text"
+    case secondaryGray = "secondaryGray"
 }
