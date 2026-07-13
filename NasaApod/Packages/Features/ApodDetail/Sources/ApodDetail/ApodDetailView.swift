@@ -6,6 +6,7 @@
 //
 
 import ApodDomain
+import DesignSystem
 import SwiftUI
 
 public struct ApodDetailView: View {
@@ -14,9 +15,11 @@ public struct ApodDetailView: View {
     public init(apod: Apod) {
        viewModel = ApodDetailViewModel(apod: apod)
     }
+    
     public var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
+                AppAsyncImage(imageURL: viewModel.apod.url)
                 Text(viewModel.explanation)
             }
             .padding(.horizontal)

@@ -74,7 +74,14 @@ extension ApodInfoView {
                     .frame(height: 350)
                     .cornerRadius(12)
             } else {
-                MediaPlaceholder()
+                Rectangle()
+                    .foregroundStyle(DSColor.secondaryGray)
+                    .opacity(0.5)
+                    .frame(height: 350)
+                    .cornerRadius(8)
+                    .overlay {
+                        ProgressView()
+                    }
             }
         }
         .onTapGesture {

@@ -18,9 +18,14 @@ public final class ExploreViewViewModel {
 
     private var isLoading = false
     private var hasMore = true
+    private var countForPage = 5
 
     public init(exploreRepository: ExploreRepository) {
         self.repository = exploreRepository
+    }
+    
+    var isShowApods: Bool {
+        !apods.isEmpty
     }
 
     @MainActor
@@ -48,7 +53,7 @@ public final class ExploreViewViewModel {
         defer { isLoading = false }
 
         do {
-            let newApods = try await repository.fetchApods(count: 5)
+            let newApods = try await repository.fetchApods(count: countForPage)
 
             guard !newApods.isEmpty else {
                 hasMore = false

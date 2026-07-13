@@ -6,10 +6,10 @@
 //
 
 import AppFoundation
-import DesignSystem
-import SwiftUI
-import MediaKit
 import ApodDomain
+import DesignSystem
+import MediaKit
+import SwiftUI
 
 struct ApodRow: View {
     let apod: Apod
@@ -45,34 +45,12 @@ extension ApodRow {
         case .video:
             videoView
         case .unknown:
-            MediaPlaceholder()
+            EmptyView()
         }
     }
     
     private var imageView: some View {
-        AsyncImage(
-            url: apod.url,
-            transaction: Transaction(animation: .easeInOut(duration: 0.35))
-        ) { phase in
-            switch phase {
-            case .empty:
-                MediaPlaceholder()
-
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity)
-                    .cornerRadius(10)
-                    .transition(.opacity)
-
-            case .failure:
-                MediaPlaceholder()
-
-            @unknown default:
-                EmptyView()
-            }
-        }
+        AppAsyncImage(imageURL: apod.url)
     }
     
     private var videoView: some View {

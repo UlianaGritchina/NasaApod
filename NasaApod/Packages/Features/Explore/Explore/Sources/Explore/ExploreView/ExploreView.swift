@@ -40,7 +40,7 @@ extension ExploreView {
     private var apodsScroll: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack(spacing: Spacing.xs) {
-                if !viewModel.apods.isEmpty {
+                if viewModel.isShowApods {
                     ForEach(viewModel.apods, id: \.date) { apod in
                         NavigationLink(destination: ApodDetailView(apod: apod)) {
                             ApodRow(apod: apod)
@@ -55,8 +55,9 @@ extension ExploreView {
                     ProgressView()
                 }
             }
-            .padding([.horizontal, .bottom], Spacing.md)
+            .padding(.horizontal, Spacing.xs)
             .padding(.top, Spacing.xxs)
+            .padding(.bottom, Spacing.md)
         }
     }
 }

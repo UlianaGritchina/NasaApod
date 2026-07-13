@@ -15,9 +15,15 @@ let package = Package(
             targets: ["DesignSystem"]
         ),
     ],
+    dependencies: [
+        .package(path: "../Core"),
+    ],
     targets: [
         .target(
-            name: "DesignSystem"
+            name: "DesignSystem",
+            dependencies: [
+                .product(name: "Core", package: "Core"),
+            ]
         ),
         .testTarget(
             name: "DesignSystemTests",
