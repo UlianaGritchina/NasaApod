@@ -23,7 +23,8 @@ let package = Package(
         .package(path: "../MediaKit"),
         .package(path: "../ApodData"),
         .package(path: "../ExploreDomain"),
-        .package(path: "../ApodDetail")
+        .package(path: "../ApodDetail"),
+        .package(path: "../AsyncCachedImage")
     ],
     targets: [
         .target(
@@ -35,7 +36,8 @@ let package = Package(
                 .product(name: "MediaKit", package: "MediaKit"),
                 .product(name: "ApodData", package: "ApodData"),
                 .product(name: "ExploreDomain", package: "ExploreDomain"),
-                .product(name: "ApodDetail", package: "ApodDetail")
+                .product(name: "ApodDetail", package: "ApodDetail"),
+                .product(name: "AsyncCachedImage", package: "AsyncCachedImage")
             ]
         ),
         .testTarget(

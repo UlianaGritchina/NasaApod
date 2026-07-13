@@ -5,6 +5,7 @@
 //  Created by Ульяна Гритчина on 08.07.2026.
 //
 
+import AsyncCachedImage
 import AppFoundation
 import ApodDomain
 import DesignSystem
@@ -50,7 +51,7 @@ extension ApodRow {
     }
     
     private var imageView: some View {
-        AppAsyncImage(imageURL: apod.url)
+        AsyncCachedImage(url: apod.url)
     }
     
     private var videoView: some View {

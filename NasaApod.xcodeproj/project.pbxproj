@@ -18,6 +18,7 @@
 		0E3919592FFE8FA400B982A0 /* ExploreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3919582FFE8FA400B982A0 /* ExploreAPI.swift */; };
 		0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4CD3742FF3B75700485651 /* DesignSystem */; };
 		0E4FDDC22FFFCB640098E4EF /* MediaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4FDDC12FFFCB640098E4EF /* MediaKit */; };
+		0EA59BC3300544F0007D2FB8 /* AsyncCachedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0EA59BC2300544F0007D2FB8 /* AsyncCachedImage */; };
 		0EE5D9A52FFD102400CC4C96 /* MainTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A42FFD102400CC4C96 /* MainTabView */; };
 		0EE5D9A82FFD112E00CC4C96 /* AppFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE5D9A72FFD112E00CC4C96 /* AppFoundation */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Packages/AppFoundation,
+				Packages/AsyncCachedImage,
 				Packages/DependencyContainer,
 				Packages/Features/APOD/ApodData,
 				Packages/Features/APOD/ApodDomain,
@@ -102,6 +104,7 @@
 				0E2402A4300105FA00A46D20 /* ApodDomain in Frameworks */,
 				0E4CD3752FF3B75700485651 /* DesignSystem in Frameworks */,
 				0E3919542FFE808900B982A0 /* Explore in Frameworks */,
+				0EA59BC3300544F0007D2FB8 /* AsyncCachedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +186,7 @@
 				0E377BE430010D8900931F82 /* DependencyContainer */,
 				0E377C273001362000931F82 /* ExploreData */,
 				0E377C293001362500931F82 /* ExploreDomain */,
+				0EA59BC2300544F0007D2FB8 /* AsyncCachedImage */,
 			);
 			productName = NASA_APOD;
 			productReference = 0E7607492FEAAEF300F958AA /* NasaApod.app */;
@@ -730,6 +734,10 @@
 		0E4FDDC12FFFCB640098E4EF /* MediaKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MediaKit;
+		};
+		0EA59BC2300544F0007D2FB8 /* AsyncCachedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AsyncCachedImage;
 		};
 		0EE5D9A42FFD102400CC4C96 /* MainTabView */ = {
 			isa = XCSwiftPackageProductDependency;
