@@ -19,10 +19,12 @@ final class NetworkImageLoaderImpl: NetworkImageLoader {
     }
     
     func data(from url: URL) async throws -> Data {
-        let (data, response) = try await session.data(
-            from: url
-        )
-        
+        let (data, response) = try await session.data(from: url)
+        try checkResponse(response)
+        return data
+    }
+    
+    private func checkResponse(_ response: URLResponse) throws {
         guard let httpResponse = response as? HTTPURLResponse else {
             throw ImageLoaderError.invalidResponse
         }
@@ -32,7 +34,6 @@ final class NetworkImageLoaderImpl: NetworkImageLoader {
                 statusCode: httpResponse.statusCode
             )
         }
-        return data
     }
 }
 

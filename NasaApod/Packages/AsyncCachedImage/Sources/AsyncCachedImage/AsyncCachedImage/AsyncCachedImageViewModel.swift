@@ -17,14 +17,13 @@ final class AsyncCachedImageViewModel {
     
     init(url: URL) {
         self.url = url
-        imagePipeline = ImagePipelineImpl(
-            memoryCache: MemoryCacheServiceImpl(),
-            networkImageLoader: NetworkImageLoaderImpl()
-        )
+        imagePipeline = ImagePipelineImpl.shared
     }
     
     @MainActor
     func loadImageData() async {
+        guard case .loading = loadingState else { return }
+
         do {
             let imageData = try await imagePipeline.getImageData(for: url)
             loadingState = .loaded(imageData: imageData)

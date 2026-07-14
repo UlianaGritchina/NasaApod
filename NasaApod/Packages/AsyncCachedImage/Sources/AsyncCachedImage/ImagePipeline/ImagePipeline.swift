@@ -16,9 +16,11 @@ final class ImagePipelineImpl: ImagePipeline {
     let memoryCache: MemoryCacheService
     let networkImageLoader: NetworkImageLoader
     
-    init(memoryCache: MemoryCacheService, networkImageLoader: NetworkImageLoader) {
-        self.memoryCache = memoryCache
-        self.networkImageLoader = networkImageLoader
+    public static let shared = ImagePipelineImpl()
+    
+    private init() {
+        self.memoryCache = MemoryCacheServiceImpl()
+        self.networkImageLoader = NetworkImageLoaderImpl()
     }
     
     func getImageData(for url: URL) async throws -> Data {
@@ -29,6 +31,8 @@ final class ImagePipelineImpl: ImagePipeline {
         }
         
         let imageData = try await networkImageLoader.data(from: url)
+        
+        memoryCache.save(data: imageData, for: cacheKey)
         
         return imageData
     }
