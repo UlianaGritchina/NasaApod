@@ -11,15 +11,13 @@ import Foundation
 
 @Observable
 public final class ExploreViewViewModel {
-
-    var apods: [Apod] = []
-
     private let repository: ExploreRepository
-
     private var isLoading = false
     private var hasMore = true
     private var countForPage = 5
-
+    
+    var apods: [Apod] = []
+    
     public init(exploreRepository: ExploreRepository) {
         self.repository = exploreRepository
     }

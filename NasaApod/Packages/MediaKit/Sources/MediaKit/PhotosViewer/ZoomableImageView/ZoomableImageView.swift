@@ -5,7 +5,6 @@
 //  Created by Ульяна Гритчина on 06.07.2026.
 //
 
-
 import SwiftUI
 
 struct ZoomableImageView: UIViewRepresentable {

@@ -12,7 +12,7 @@ import DesignSystem
 import SwiftUI
 
 public struct ApodDetailView: View {
-    var viewModel: ApodDetailViewModel
+    @State private var viewModel: ApodDetailViewModel
     
     public init(apod: Apod) {
        viewModel = ApodDetailViewModel(apod: apod)

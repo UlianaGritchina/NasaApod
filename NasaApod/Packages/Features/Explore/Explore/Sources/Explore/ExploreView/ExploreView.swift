@@ -10,8 +10,7 @@ import DesignSystem
 import SwiftUI
 
 public struct ExploreView: View {
-    
-    var viewModel: ExploreViewViewModel
+    @State private var viewModel: ExploreViewViewModel
     
     public init(viewModel: ExploreViewViewModel) {
         self.viewModel = viewModel

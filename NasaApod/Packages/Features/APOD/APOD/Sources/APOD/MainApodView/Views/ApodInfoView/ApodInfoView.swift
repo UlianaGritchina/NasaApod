@@ -6,12 +6,13 @@
 //
 
 import ApodDomain
+import AsyncCacheImage
 import DesignSystem
 import MediaKit
 import SwiftUI
 
 struct ApodInfoView: View {
-    private var viewModel: ApodInfoViewModel
+    @State private var viewModel: ApodInfoViewModel
     
     init(apod: Apod, imageData: Data?) {
         viewModel = ApodInfoViewModel(apod: apod, imageData: imageData)
@@ -27,7 +28,7 @@ struct ApodInfoView: View {
         }
         .fullScreenCover(isPresented: $vm.isOpenImageViewer) {
             if let imageData = viewModel.imageData {
-                PhotosViewer([imageData, imageData], title: viewModel.title)
+                PhotosViewer([imageData], title: viewModel.title)
             }
         }
     }
@@ -49,7 +50,6 @@ struct ApodInfoView: View {
 }
 
 extension ApodInfoView {
-    
     private var header: some View {
         Text(viewModel.title)
             .font(.appSubTitle)
@@ -66,27 +66,8 @@ extension ApodInfoView {
     }
     
     private var imageView: some View {
-        VStack {
-            if let imageData = viewModel.imageData,
-               let platformImage = PlatformImage(data: imageData) {
-                Image(platformImage: platformImage)
-                    .resizable()
-                    .frame(height: 350)
-                    .cornerRadius(12)
-            } else {
-                Rectangle()
-                    .foregroundStyle(DSColor.secondaryGray)
-                    .opacity(0.5)
-                    .frame(height: 350)
-                    .cornerRadius(8)
-                    .overlay {
-                        ProgressView()
-                    }
-            }
-        }
-        .onTapGesture {
-            viewModel.openPhotosViewer()
-        }
+        AsyncCacheImage(url: viewModel.apod.url)
+            .onTapGesture { viewModel.openPhotosViewer() }
     }
     
     private var videoView: some View {

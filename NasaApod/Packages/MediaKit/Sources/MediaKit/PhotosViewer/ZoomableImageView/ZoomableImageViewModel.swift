@@ -11,7 +11,6 @@ import Observation
 @MainActor
 @Observable
 final class ZoomableImageViewModel {
-    
     let minScale: CGFloat = 1
     let maxScale: CGFloat = 4
     

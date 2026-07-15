@@ -15,14 +15,13 @@ import Foundation
 @MainActor
 @Observable
 public final class MainTabViewViewModel {
-    
-    private let networkMonitor: NetworkMonitor?
-    
     let mainApodViewModel: MainApodViewModel
     let exploreViewModel: ExploreViewViewModel
     
     var isLostConnection = false
     
+    private let networkMonitor: NetworkMonitor?
+
     public init(
         apodRepository: ApodRepository,
         exploreRepository: ExploreRepository,

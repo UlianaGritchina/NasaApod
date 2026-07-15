@@ -11,7 +11,7 @@ import SwiftUI
 public struct PhotosViewer: View {
     @Environment(\.dismiss) private var dismiss
     
-    var viewModel: PhotosViewerViewModel
+    @State private var viewModel: PhotosViewerViewModel
     
     public init(_ photos: [Data], title: String? = nil) {
         viewModel = PhotosViewerViewModel(photos: photos, title: title)

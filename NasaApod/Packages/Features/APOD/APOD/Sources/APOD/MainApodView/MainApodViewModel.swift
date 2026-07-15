@@ -10,15 +10,14 @@ import Foundation
 
 @Observable
 public final class MainApodViewModel {
-    
-    private let repository: ApodRepository
+    let datePickerRange = ...Date()
     
     var apod: Apod?
     var apodImageData: Data?
     var selectedDate = Date()
     var viewState: MainApodViewState = .loading
     
-    let datePickerRange = ...Date()
+    private let repository: ApodRepository
     
     public init(repository: ApodRepository) {
         self.repository = repository
@@ -26,10 +25,6 @@ public final class MainApodViewModel {
     
     var selectedDateString: String {
         selectedDate.toString(format: .full)
-    }
-    
-    private var isNeedToUpdateApod: Bool {
-        !(apod?.date.isSameDay(as: selectedDate) ?? false)
     }
     
     @MainActor
@@ -45,7 +40,7 @@ public final class MainApodViewModel {
             viewState = .error
         }
     }
-    
+
     @MainActor
     private func fetchApodImageData(url: URL) async throws {
         apodImageData = nil
@@ -53,6 +48,10 @@ public final class MainApodViewModel {
             for: url,
             date: selectedDate
         )
+    }
+    
+    private var isNeedToUpdateApod: Bool {
+        !(apod?.date.isSameDay(as: selectedDate) ?? false)
     }
 }
 
