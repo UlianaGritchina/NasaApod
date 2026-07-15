@@ -17,16 +17,16 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../ApodDomain"),
-        .package(path: "../AsyncCachedImage"),
-        .package(path: "../DesignSystem")
+        .package(path: "../DesignSystem"),
+        .package(path: "../MediaKit")
     ],
     targets: [
         .target(
             name: "ApodDetail",
             dependencies: [
                 .product(name: "ApodDomain", package: "ApodDomain"),
-                .product(name: "AsyncCachedImage", package: "AsyncCachedImage"),
-                .product(name: "DesignSystem", package: "DesignSystem")
+                .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "MediaKit", package: "MediaKit")
             ]
         ),
         .testTarget(

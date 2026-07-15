@@ -1,0 +1,15 @@
+{
+  "originHash" : "0810a12aee64854046540aa9041bbe20c686c31bd7844620f4bc3494017295db",
+  "pins" : [
+    {
+      "identity" : "asynccacheimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/UlianaGritchina/AsyncCacheImage.git",
+      "state" : {
+        "revision" : "3bfc93f4f94902b42cfbc04bba13b4ff3774401f",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

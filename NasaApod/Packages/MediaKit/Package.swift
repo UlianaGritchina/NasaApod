@@ -1,5 +1,4 @@
 // swift-tools-version: 6.2
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -17,14 +16,20 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
+        .package(
+            url: "https://github.com/UlianaGritchina/AsyncCacheImage.git",
+            from: "1.0.0"
+        )
     ],
     targets: [
         .target(
             name: "MediaKit",
             dependencies: [
                 .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "AsyncCacheImage",  package: "AsyncCacheImage")
             ]
         ),
+
         .testTarget(
             name: "MediaKitTests",
             dependencies: ["MediaKit"]

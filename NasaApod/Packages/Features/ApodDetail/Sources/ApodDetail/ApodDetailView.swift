@@ -5,8 +5,9 @@
 //  Created by Ульяна Гритчина on 12.07.2026.
 //
 
-import AsyncCachedImage
+import AsyncCacheImage
 import ApodDomain
+import MediaKit
 import DesignSystem
 import SwiftUI
 
@@ -20,7 +21,7 @@ public struct ApodDetailView: View {
     public var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                AsyncCachedImage(url: viewModel.apod.url)
+                AsyncCacheImage(url: viewModel.apod.url)
                 Text(viewModel.explanation)
             }
             .padding(.horizontal)
