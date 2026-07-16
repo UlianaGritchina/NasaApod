@@ -12,10 +12,10 @@ import MediaKit
 import SwiftUI
 
 struct ApodInfoView: View {
-    @State private var viewModel: ApodInfoViewModel
+    private var viewModel: ApodInfoViewModel
     
-    init(apod: Apod, imageData: Data?) {
-        viewModel = ApodInfoViewModel(apod: apod, imageData: imageData)
+    init(apod: Apod) {
+        viewModel = ApodInfoViewModel(apod: apod)
     }
     
     var body: some View {
@@ -44,8 +44,7 @@ struct ApodInfoView: View {
             mediaType: .image,
             copyright: "Uliana",
             hdURL: nil
-        ),
-        imageData: nil
+        )
     )
 }
 
@@ -66,8 +65,16 @@ extension ApodInfoView {
     }
     
     private var imageView: some View {
-        AsyncCacheImage(url: viewModel.apod.url)
-            .onTapGesture { viewModel.openPhotosViewer() }
+        AsyncCacheImage(url: viewModel.apod.url) { image, data in
+            image
+                .resizable()
+                .frame(height: 250)
+                .cornerRadius(10)
+                .onAppear {
+                    viewModel.imageData = data
+                }
+        }
+        .onTapGesture { viewModel.openPhotosViewer() }
     }
     
     private var videoView: some View {

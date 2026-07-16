@@ -51,7 +51,7 @@ extension ApodRow {
     }
     
     private var imageView: some View {
-        AsyncCacheImage(url: apod.url)
+        DefaultAsyncCacheImage(url: apod.url)
     }
     
     private var videoView: some View {

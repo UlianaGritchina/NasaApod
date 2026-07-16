@@ -21,7 +21,7 @@ public struct ApodDetailView: View {
     public var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                AsyncCacheImage(url: viewModel.apod.url)
+                DefaultAsyncCacheImage(url: viewModel.apod.url)
                 Text(viewModel.explanation)
             }
             .padding(.horizontal)

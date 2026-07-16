@@ -1,13 +1,13 @@
 {
-  "originHash" : "0810a12aee64854046540aa9041bbe20c686c31bd7844620f4bc3494017295db",
+  "originHash" : "407eb651dd438edab4e0cf58dfc770dda15afb7e9beb741333e5c104058c8dea",
   "pins" : [
     {
       "identity" : "asynccacheimage",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/UlianaGritchina/AsyncCacheImage.git",
       "state" : {
-        "revision" : "3bfc93f4f94902b42cfbc04bba13b4ff3774401f",
-        "version" : "1.0.0"
+        "revision" : "812e0d6d698364e8d62e88dc3997c1bf2972bbc3",
+        "version" : "1.0.2"
       }
     }
   ],

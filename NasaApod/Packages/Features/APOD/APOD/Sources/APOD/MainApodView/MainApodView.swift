@@ -65,11 +65,10 @@ extension MainApodView {
             ProgressView()
             
         case .loaded(let apod):
-            ApodInfoView(
-                apod: apod,
-                imageData: viewModel.apodImageData
-            )
-            .transition(.opacity)
+            ApodInfoView(apod: apod)
+                .id(apod.title)
+                .transition(.opacity)
+            
             
         case .error:
             Text("try again later")

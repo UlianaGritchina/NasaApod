@@ -12,13 +12,12 @@ import ApodDomain
 @Observable
 final class ApodInfoViewModel {
     let apod: Apod
-    let imageData: Data?
     
+    var imageData: Data?
     var isOpenImageViewer = false
     
-    init(apod: Apod, imageData: Data?) {
+    init(apod: Apod) {
         self.apod = apod
-        self.imageData = imageData
     }
     
     var title: String {
