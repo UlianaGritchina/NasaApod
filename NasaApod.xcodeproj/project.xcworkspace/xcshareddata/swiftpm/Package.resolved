@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/UlianaGritchina/AsyncCacheImage.git",
       "state" : {
-        "revision" : "812e0d6d698364e8d62e88dc3997c1bf2972bbc3",
-        "version" : "1.0.2"
+        "revision" : "a9923d6179a588d0c6545586d56e3c1dc51c8393",
+        "version" : "1.0.3"
       }
     }
   ],
